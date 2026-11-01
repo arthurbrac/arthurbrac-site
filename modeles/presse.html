@@ -1,0 +1,76 @@
+{% extends "base.html" %}
+{% from "macros.html" import photo, appel %}
+{% set P = presse %}
+{% set titre_google = P.titre_google %}
+{% set description_google = P.description_google %}
+{% set adresse = "/presse/" %}
+
+{% block donnees_structurees %}
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Accueil", "item": "{{ url_site }}/" },
+      { "@type": "ListItem", "position": 2, "name": "Presse et médias", "item": "{{ url_site }}/presse/" }
+    ]
+  }
+  </script>
+{% endblock %}
+
+{% macro ligne(a) %}
+<li class="presse-ligne">
+  <span class="presse-ligne__media">{{ a.media }}</span>
+  <span class="presse-ligne__titre">{% if a.lien %}<a href="{{ a.lien }}" rel="noopener">{{ a.titre|md_ligne }}</a>{% else %}{{ a.titre|md_ligne }}{% endif %}</span>
+  <span class="presse-ligne__date">{{ a.date }}</span>
+</li>
+{% endmacro %}
+
+{% block contenu %}
+    <section class="section fiche-livre">
+      <div class="conteneur">
+        <nav class="ariane ariane--haut" aria-label="Fil d'Ariane"><ol><li><a href="/">Accueil</a></li><li>Presse</li></ol></nav>
+        <h1 class="titre-page">{{ P.titre }}</h1>
+        <p class="chapeau">{{ P.introduction|typo }}</p>
+      </div>
+    </section>
+
+    <section class="section section--sable" aria-label="Citations de presse">
+      <div class="conteneur">
+        {% for c in P.citations %}
+        <figure class="citation{% if not loop.first %} citation--seconde{% endif %}">
+          <blockquote>{{ ("« " ~ c.texte ~ " »")|md }}</blockquote>
+          <figcaption>{{ c.source|md_ligne }}</figcaption>
+        </figure>
+        {% endfor %}
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="titre-articles">
+      <div class="conteneur">
+        <h2 id="titre-articles">{{ P.articles_titre }}</h2>
+        <ul class="presse-liste">{% for a in P.articles %}{{ ligne(a) }}{% endfor %}</ul>
+
+        <h2 id="titre-ecouter" class="titre-espace">{{ P.ecouter_titre }}</h2>
+        <ul class="presse-liste">{% for a in P.ecouter %}{{ ligne(a) }}{% endfor %}</ul>
+      </div>
+    </section>
+
+    <section class="section section--sable" aria-labelledby="titre-journalistes">
+      <div class="conteneur">
+        <div class="section__intro">
+          <h2 id="titre-journalistes">{{ P.journalistes_titre }}</h2>
+          {{ P.journalistes_texte|md }}
+          <p><a class="bouton" href="{{ site.lien_formulaire }}">Contacter Arthur</a></p>
+        </div>
+        <div class="photos-hd">
+          {% for p in P.photos_hd %}
+          <figure>
+            {{ photo(p.photo, "Arthur Brac de la Perrière - " ~ p.description, "(max-width: 700px) 100vw, 360px", (500,)) }}
+            <figcaption>{{ p.description }}<br><a href="{{ p.photo }}" download>Télécharger en haute définition</a></figcaption>
+          </figure>
+          {% endfor %}
+        </div>
+      </div>
+    </section>
+{% endblock %}

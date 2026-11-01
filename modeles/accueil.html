@@ -14,7 +14,7 @@
     "name": "{{ site.nom }}",
     "url": "{{ url_site }}/",
     "image": "{{ url_site }}/assets/img/partage.jpg",
-    "jobTitle": "Chef d'entreprise, écrivain et conférencier",
+    "jobTitle": {{ site.metier|tojson }},
     "description": "Entrepreneur, écrivain et conférencier lyonnais. Il intervient auprès des dirigeants, des réseaux d'entrepreneurs et des écoles sur ce que la philosophie apporte à l'action.",
     "alumniOf": { "@type": "CollegeOrUniversity", "name": "HEC Paris" },
     "address": { "@type": "PostalAddress", "addressLocality": "Lyon", "addressCountry": "FR" },

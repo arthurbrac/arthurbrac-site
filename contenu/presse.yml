@@ -1,0 +1,73 @@
+# Page Presse et médias (modifiable dans Pages CMS > Presse)
+titre_google: Presse et médias - Arthur Brac de la Perrière
+description_google: >-
+  Arthur Brac de la Perrière dans la presse et les médias : Les Échos, Le Progrès,
+  podcasts et vidéos sur la philosophie et l'entreprise. Contact presse et photos.
+titre: Presse et médias
+introduction: Ce que la presse dit de ses livres, et où l'écouter parler de philosophie et d'entreprise.
+
+citations:
+  - texte: On referme ces pages avec une vision remarquablement concrète du métier d'entrepreneur… et une réelle dose de compassion. Un regard singulier et stimulant.
+    source: "*Les Échos*, Gabriel Grésillon, à propos de *L'entrepreneur philosophe*"
+  - texte: Humour, érudition, pertinence du regard sur la vie d'une entreprise.
+    source: "*Le Progrès*, Sylvie Silvestre, à propos de *L'entrepreneur philosophe*"
+
+articles_titre: Dans la presse
+articles:
+  - media: Les Échos
+    titre: "« La philosophie au secours de l'entrepreneur », critique de L'entrepreneur philosophe"
+    date: 2021-2022
+    lien: ""
+  - media: Le Progrès
+    titre: "« L'entrepreneur philosophe » d'Arthur Brac de la Perrière"
+    date: Février 2022
+    lien: ""
+  - media: Maddyness
+    titre: Interview sur la philosophie dans la vie d'un dirigeant de PME
+    date: 2021-2022
+    lien: https://www.maddyness.com/?p=1356044
+  - media: Portrait Culture Justice
+    titre: Portrait de l'auteur de La pierre intérieure
+    date: Septembre 2019
+    lien: https://portrait-culture-justice.com/2019/09/226-portrait-du-jour-arthur-brac-de-la-perriere-l-auteur-de-la-pierre-interieure.html
+  - media: Le Progrès
+    titre: Présentation de La pieuvre de Lhassa à Vaugneray
+    date: Février 2012
+    lien: https://www.leprogres.fr/rhone/2012/02/07/vaugneray-arthur-brac-de-la-perriere-presente-la-pieuvre-de-lhassa
+  - media: Lonely Planet, Comète
+    titre: Note de lecture sur La Terre est un poème
+    date: Juin 2006
+    lien: ""
+
+ecouter_titre: Vidéos et podcasts
+ecouter:
+  - media: On a toujours fait comme ça (podcast)
+    titre: Mieux diriger grâce à la philo
+    date: 2021-2022
+    lien: https://youtu.be/JcBOMI2vMQs
+  - media: Cultcheers, The Musettes (vidéo)
+    titre: Un ou des philosophes pour inspirer les entrepreneurs ?
+    date: 2021-2022
+    lien: https://youtube.com/shorts/4iuUsK2J61Y
+  - media: Action Coach (interview)
+    titre: Entretien avec Arthur Brac de la Perrière
+    date: 2021-2022
+    lien: https://youtu.be/ymzHj69FdEE
+  - media: Sentiers d'auteurs n°277 (interview)
+    titre: Entretien avec Patrick Jagou
+    date: 2021-2022
+    lien: https://youtu.be/su_x-K8ZnDs
+  - media: Prix ARAL (vidéo)
+    titre: Remise du prix littéraire ARAL pour La pierre intérieure
+    date: "2020"
+    lien: https://youtu.be/d8CsFi4t5vg
+
+journalistes_titre: Pour les journalistes
+journalistes_texte: "Pour une interview, une chronique ou une invitation : écrivez via le formulaire de contact. Une présentation courte est disponible sur la page [À propos](/a-propos/#bio-courte), et ces photos peuvent être utilisées librement pour un article."
+photos_hd:
+  - photo: /medias/portraits/arthur-lunettes-nb.jpg
+    description: Portrait noir et blanc, format vertical
+  - photo: /medias/portraits/arthur-mur-beton-nb.jpg
+    description: Portrait noir et blanc, format horizontal
+  - photo: /medias/portraits/arthur-jardin.jpg
+    description: Portrait couleur, format horizontal

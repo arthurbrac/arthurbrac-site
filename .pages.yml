@@ -260,6 +260,53 @@ content:
           - { name: livre, label: "Livre", type: string }
           - { name: auteur, label: "Crédit", type: string }
 
+  - name: presse
+    label: Presse
+    type: file
+    path: contenu/presse.yml
+    format: yaml
+    fields:
+      - { name: titre_google, label: "Titre affiché dans Google", type: string }
+      - { name: description_google, label: "Description affichée dans Google", type: text }
+      - { name: titre, label: "Titre de la page", type: string }
+      - { name: introduction, label: "Introduction", type: text }
+      - name: citations
+        label: Citations de presse
+        type: object
+        list: true
+        fields:
+          - { name: texte, label: "Citation (sans guillemets)", type: text }
+          - { name: source, label: "Source", type: string }
+      - { name: articles_titre, label: "Titre des articles", type: string }
+      - name: articles
+        label: Articles (du plus récent au plus ancien)
+        type: object
+        list: true
+        fields:
+          - { name: media, label: "Média", type: string }
+          - { name: titre, label: "Titre ou sujet", type: string }
+          - { name: date, label: "Date", type: string }
+          - { name: lien, label: "Lien (facultatif)", type: string }
+      - { name: ecouter_titre, label: "Titre vidéos et podcasts", type: string }
+      - name: ecouter
+        label: Vidéos et podcasts
+        type: object
+        list: true
+        fields:
+          - { name: media, label: "Média", type: string }
+          - { name: titre, label: "Titre", type: string }
+          - { name: date, label: "Date", type: string }
+          - { name: lien, label: "Lien", type: string }
+      - { name: journalistes_titre, label: "Titre espace journalistes", type: string }
+      - { name: journalistes_texte, label: "Texte espace journalistes", component: aide_mise_en_forme }
+      - name: photos_hd
+        label: Photos téléchargeables
+        type: object
+        list: true
+        fields:
+          - { name: photo, label: "Photo", type: image }
+          - { name: description, label: "Description", type: string }
+
   - name: temoignages
     label: Témoignages
     type: file
@@ -291,3 +338,4 @@ content:
       - { name: agence_lien, label: "Lien vers la fiche de l'agence", type: string }
       - { name: bouton_invitation, label: "Texte du bouton du menu", type: string }
       - { name: lien_formulaire, label: "Lien du bouton d'invitation", type: string }
+      - { name: metier, label: "Métier (affiché par Google)", type: string }

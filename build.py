@@ -122,6 +122,7 @@ PAGES = [
     ("conferences.html", "conferences/index.html", "conferences"),
     ("livres.html", "livres/index.html", "livres"),
     ("apropos.html", "a-propos/index.html", "a-propos"),
+    ("presse.html", "presse/index.html", "presse"),
 ]
 
 
@@ -154,6 +155,7 @@ def main():
         "temoignages": charger("temoignages").get("temoignages", []),
         "livres": charger("livres"),
         "apropos": charger("apropos"),
+        "presse": charger("presse"),
     }
     pages = list(PAGES)
     for livre in donnees["livres"].get("livres", []):
@@ -171,6 +173,13 @@ def main():
 
     # fichiers fixes : styles, polices, icônes, documents
     shutil.copytree(RACINE / "assets", SORTIE / "assets")
+    # photos haute définition proposées au téléchargement (page Presse)
+    for p in donnees["presse"].get("photos_hd", []):
+        source = RACINE / p["photo"].lstrip("/")
+        if source.exists():
+            cible = SORTIE / p["photo"].lstrip("/")
+            cible.parent.mkdir(parents=True, exist_ok=True)
+            shutil.copy(source, cible)
     if (RACINE / "medias" / "documents").exists():
         shutil.copytree(RACINE / "medias" / "documents", SORTIE / "medias" / "documents", dirs_exist_ok=True)
     for fixe in ("CNAME", "404.html"):
