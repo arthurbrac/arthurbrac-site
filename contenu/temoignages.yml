@@ -1,0 +1,30 @@
+# Témoignages d'organisateurs (modifiables dans Pages CMS > Témoignages)
+# « version_courte » s'affiche sur l'accueil, « texte » sur la page Conférences.
+temoignages:
+  - nom: Christian Coutenceau
+    fonction: Président du Hub Industries & Technologies, HEC Alumni
+    version_courte: >-
+      Faire dialoguer entrepreneuriat et philosophie est non seulement possible,
+      mais profondément stimulant ! Cela a été une belle occasion de bousculer nos
+      certitudes, d'élargir nos perspectives et de prendre de la hauteur sur nos
+      pratiques entrepreneuriales.
+    texte: >-
+      Faire dialoguer entrepreneuriat et philosophie est non seulement possible,
+      mais profondément stimulant ! J'ai invité Arthur à intervenir lors d'une
+      conférence pour partager sa vision singulière, nourrie de réflexions
+      philosophiques et illustrée par de nombreuses expériences vécues. Cela a été
+      une belle occasion de bousculer nos certitudes, d'élargir nos perspectives et
+      de prendre de la hauteur sur nos pratiques entrepreneuriales.
+  - nom: Victor Chevallier
+    fonction: GMZ & Son's
+    version_courte: >-
+      Une conférence vraiment réussie. Il a parlé avec humour d'un récit du
+      quotidien, avec une philosophie pleine de bon sens, accessible à un public
+      très varié. Nous recommandons !
+    texte: >-
+      Arthur est intervenu lors de notre événement avec une conférence vraiment
+      réussie. Il a parlé avec humour d'un récit du quotidien, s'enchaînant avec
+      naturel avec une philosophie de comptoir pleine de bon sens. Cette
+      intervention est accessible à un public très varié. Chaque participant est
+      reparti avec son livre *L'entrepreneur philosophe*, un souvenir concret de
+      son témoignage. Nous recommandons !

@@ -1,0 +1,161 @@
+{% extends "base.html" %}
+{% from "macros.html" import photo, temoignage, appel %}
+{% set c = conferences %}
+{% set titre_google = c.titre_google %}
+{% set description_google = c.description_google %}
+{% set adresse = "/conferences/" %}
+
+{% block donnees_structurees %}
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Service",
+        "name": "Conférences : philosophie et entreprise",
+        "serviceType": "Conférence",
+        "description": {{ c.description_google|tojson }},
+        "provider": { "@type": "Person", "@id": "{{ url_site }}/#arthur", "name": "{{ site.nom }}", "url": "{{ url_site }}/" },
+        "areaServed": [ { "@type": "City", "name": "Lyon" }, { "@type": "Country", "name": "France" } ],
+        "hasOfferCatalog": {
+          "@type": "OfferCatalog",
+          "name": "Conférences",
+          "itemListElement": [
+            {% for conf in c.liste %}{ "@type": "Offer", "itemOffered": { "@type": "Service", "name": {{ conf.titre|tojson }} } }{% if not loop.last %},{% endif %}
+            {% endfor %}
+          ]
+        }
+      },
+      {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          { "@type": "ListItem", "position": 1, "name": "Accueil", "item": "{{ url_site }}/" },
+          { "@type": "ListItem", "position": 2, "name": "Conférences", "item": "{{ url_site }}/conferences/" }
+        ]
+      }
+    ]
+  }
+  </script>
+{% endblock %}
+
+{% block contenu %}
+    <section class="bandeau">
+      {{ photo(c.bandeau_photo, "Arthur Brac de la Perrière, portrait en noir et blanc", "100vw", (800, 1600), "bandeau__image", prioritaire=True) }}
+      <div class="bandeau__texte">
+        <h1>{{ c.bandeau_titre|typo }}</h1>
+        <p>{{ c.bandeau_texte|typo }}</p>
+        <a class="bouton" href="{{ site.lien_formulaire }}">{{ c.appel_bouton }}</a>
+      </div>
+    </section>
+
+    <nav class="conteneur ariane" aria-label="Fil d'Ariane">
+      <ol><li><a href="/">Accueil</a></li><li>Conférences</li></ol>
+    </nav>
+
+    <section class="section" aria-labelledby="titre-approche">
+      <div class="conteneur section__intro">
+        <h2 id="titre-approche">{{ c.approche_titre|typo }}</h2>
+        {{ c.approche_texte|md }}
+      </div>
+    </section>
+
+    <section class="section section--sable section--serree" aria-labelledby="titre-catalogue">
+      <div class="conteneur">
+        <h2 id="titre-catalogue" class="visuellement-cache">Les conférences</h2>
+        <div class="conf-liste">
+          {% for conf in c.liste %}
+          <article class="conf{% if conf.phare %} conf--phare{% endif %}" id="{{ conf.ancre }}">
+            <div>
+              {% if conf.phare %}<span class="conf__badge">Conférence phare</span>{% endif %}
+              <h2>{{ conf.titre|typo }}</h2>
+              <p class="conf__pour">{{ conf.pour_qui|typo }}</p>
+              {{ conf.description|md }}
+              <h3>{{ conf.points_titre }}</h3>
+              {% if conf.points_numerotes %}<ol class="deroule">{% else %}<ul>{% endif %}
+                {% for p in conf.points %}<li>{{ p|typo }}</li>{% endfor %}
+              {% if conf.points_numerotes %}</ol>{% else %}</ul>{% endif %}
+            </div>
+            <aside class="conf__cote">
+              <h3>Ce que le public en retire</h3>
+              <ul>{% for b in conf.benefices %}<li>{{ b|typo }}</li>{% endfor %}</ul>
+              <h3>Format</h3>
+              <p>{{ conf.format|typo }}</p>
+            </aside>
+          </article>
+          {% endfor %}
+        </div>
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="titre-formats">
+      <div class="conteneur">
+        <h2 id="titre-formats">{{ c.formats_titre }}</h2>
+        <div class="cartes-3">
+          {% for f in c.formats %}<div class="carte"><h3>{{ f.titre }}</h3><p>{{ f.texte|typo }}</p></div>{% endfor %}
+        </div>
+        <div class="infos">
+          {% for i in c.infos_pratiques %}<div><strong>{{ i.titre }}</strong><p>{{ i.texte|typo }}</p></div>{% endfor %}
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--sable" aria-labelledby="titre-galerie">
+      <div class="conteneur">
+        <h2 id="titre-galerie">{{ c.galerie_titre }}</h2>
+        <div class="galerie galerie--simple">
+          {% for g in c.galerie %}
+          <figure>
+            {{ photo(g.photo, g.description, "(max-width: 480px) 100vw, (max-width: 820px) 50vw, 360px", (500, 1000), style=("object-position: center 20%" if g.cadrage == "haut" else "")) }}
+            <figcaption>{{ g.legende }}</figcaption>
+          </figure>
+          {% endfor %}
+        </div>
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="titre-medias">
+      <div class="conteneur">
+        <h2 id="titre-medias">{{ c.medias_titre }}</h2>
+        <div class="medias">
+          {% for m in c.medias %}
+          <a class="media" href="{{ m.lien }}" rel="noopener">
+            <div class="media__vignette">{% if m.image %}{{ photo(m.image, "", "360px", (600,), style="object-position: center 30%") }}{% else %}{{ m.accroche|typo }}{% endif %}</div>
+            <div class="media__corps"><span class="media__type">{{ m.type }}</span><h3>{{ m.titre|typo }}</h3></div>
+          </a>
+          {% endfor %}
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--sable" aria-labelledby="titre-temoignages">
+      <div class="conteneur">
+        <h2 id="titre-temoignages">Ce qu'en disent les organisateurs</h2>
+        <div class="temoignages">
+          {% for t in temoignages %}{{ temoignage(t, "texte") }}{% endfor %}
+        </div>
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="titre-refs">
+      <div class="conteneur">
+        <div class="section__intro">
+          <h2 id="titre-refs">{{ c.references_titre }}</h2>
+          <p>{{ c.references_texte }}</p>
+        </div>
+        <div class="refs">
+          {% for groupe in c.references %}
+          <div>
+            <h3>{{ groupe.categorie }}</h3>
+            <ul>{% for r in groupe.lignes %}<li>{{ r.nom }} <span>{{ r.annee }}</span></li>{% endfor %}</ul>
+          </div>
+          {% endfor %}
+        </div>
+        <div class="encart-agence">
+          {{ c.agence_texte|md }}
+          <a href="{{ site.agence_lien }}" rel="noopener">Voir sa fiche</a>
+        </div>
+      </div>
+    </section>
+
+    {{ appel(c.appel_titre, c.appel_texte, c.appel_bouton, site.lien_formulaire) }}
+{% endblock %}

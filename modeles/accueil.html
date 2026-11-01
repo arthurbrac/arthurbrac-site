@@ -1,0 +1,137 @@
+{% extends "base.html" %}
+{% from "macros.html" import photo, temoignage, appel %}
+{% set titre_google = accueil.titre_google %}
+{% set titre_partage = site.nom ~ " - " ~ accueil.accroche %}
+{% set description_google = accueil.description_google %}
+{% set adresse = "/" %}
+
+{% block donnees_structurees %}
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "@id": "{{ url_site }}/#arthur",
+    "name": "{{ site.nom }}",
+    "url": "{{ url_site }}/",
+    "image": "{{ url_site }}/assets/img/partage.jpg",
+    "jobTitle": "Chef d'entreprise, écrivain et conférencier",
+    "description": "Entrepreneur, écrivain et conférencier lyonnais. Il intervient auprès des dirigeants, des réseaux d'entrepreneurs et des écoles sur ce que la philosophie apporte à l'action.",
+    "alumniOf": { "@type": "CollegeOrUniversity", "name": "HEC Paris" },
+    "address": { "@type": "PostalAddress", "addressLocality": "Lyon", "addressCountry": "FR" },
+    "award": "Prix littéraire ARAL 2020 pour La pierre intérieure",
+    "knowsAbout": ["Philosophie et entreprise", "Sens au travail", "Entrepreneuriat", "Société à mission", "Management"],
+    "sameAs": ["{{ site.linkedin }}", "{{ site.instagram }}", "{{ site.babelio }}", "{{ site.agence_lien }}"]
+  }
+  </script>
+{% endblock %}
+
+{% block contenu %}
+    <section class="heros">
+      <div class="conteneur heros__grille">
+        <div>
+          <p class="heros__accroche">{{ accueil.accroche|typo }}</p>
+          <h1>{{ accueil.sous_titre_1 }}<br>{{ accueil.sous_titre_2|typo }}</h1>
+          <div class="heros__texte">{{ accueil.introduction|md }}</div>
+          <div class="heros__actions">
+            <a class="bouton" href="{{ site.lien_formulaire }}">{{ accueil.appel_bouton }}</a>
+            <a class="bouton bouton--secondaire" href="/conferences/">Découvrir les conférences</a>
+          </div>
+        </div>
+        <div class="heros__portrait">
+          {{ photo(accueil.portrait, accueil.portrait_description, "(max-width: 880px) 240px, 450px", (480, 800), prioritaire=True) }}
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--sable" aria-labelledby="titre-chiffres">
+      <div class="conteneur">
+        <h2 id="titre-chiffres" class="visuellement-cache">En quelques chiffres</h2>
+        <ul class="chiffres">
+          {% for c in accueil.chiffres %}
+          <li><strong>{{ c.nombre }}</strong><span>{{ c.texte|typo }}{% if c.texte_2 %}<br>{{ c.texte_2|typo }}{% endif %}</span></li>
+          {% endfor %}
+        </ul>
+      </div>
+    </section>
+
+    <section class="section references" aria-labelledby="titre-references">
+      <div class="conteneur">
+        <h2 id="titre-references">{{ accueil.references_titre }}</h2>
+        <p>{{ accueil.references_sous_titre }}</p>
+        <ul>
+          {% for r in accueil.references %}<li>{{ r }}</li>{% endfor %}
+        </ul>
+        <p class="caution">Conférencier référencé par <a href="{{ site.agence_lien }}" rel="noopener">{{ site.agence_nom }}</a></p>
+      </div>
+    </section>
+
+    <section class="section section--sable" aria-labelledby="titre-conferences">
+      <div class="conteneur">
+        <div class="section__intro">
+          <h2 id="titre-conferences">{{ accueil.conferences_titre|typo }}</h2>
+          {{ accueil.conferences_texte|md }}
+        </div>
+        <div class="phare">
+          {% set phare = conferences.liste|selectattr("phare")|first %}
+          <article class="phare__carte">
+            <h3>{{ phare.titre|typo }}</h3>
+            <ul>
+              {% for b in phare.benefices %}<li>{{ b|typo }}</li>{% endfor %}
+            </ul>
+            <p>{{ phare.pour_qui|typo }}</p>
+            <a class="bouton" href="/conferences/#{{ phare.ancre }}">Voir la conférence</a>
+          </article>
+          <div class="autres">
+            {% for c in conferences.liste if not c.phare %}
+            <article>
+              <h3><a href="/conferences/#{{ c.ancre }}">{{ c.titre|typo }}</a></h3>
+              <p>{{ c.pour_qui|typo }}</p>
+            </article>
+            {% endfor %}
+            <p>{{ conferences.formats[0].texte|typo }} Région lyonnaise et toute la France.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" aria-label="Ce qu'en dit la presse">
+      <figure class="conteneur citation">
+        <blockquote>{{ ("« " ~ accueil.citation_presse.texte ~ " »")|md }}</blockquote>
+        <figcaption>{{ accueil.citation_presse.source|md_ligne }}</figcaption>
+      </figure>
+    </section>
+
+    <section class="section section--sable" aria-labelledby="titre-temoignages">
+      <div class="conteneur">
+        <h2 id="titre-temoignages">Ce qu'en disent les organisateurs</h2>
+        <div class="temoignages">
+          {% for t in temoignages[:2] %}{{ temoignage(t, "version_courte") }}{% endfor %}
+        </div>
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="titre-livres">
+      <div class="conteneur">
+        <div class="section__intro">
+          <h2 id="titre-livres">{{ accueil.livres_titre }}</h2>
+          <p>{{ accueil.livres_texte|typo }}</p>
+        </div>
+        <div class="livres-apercu">
+          {% for l in accueil.livres_en_avant %}
+          <article class="livre-carte">
+            {{ photo(l.couverture, "Couverture de " ~ l.titre, "150px", (320,)) }}
+            <div>
+              <span class="etiquette">{{ l.etiquette }}</span>
+              <h3>{{ l.titre }}</h3>
+              <p>{{ l.resume|typo }}</p>
+              <a href="{{ l.lien }}">{{ l.lien_texte }}</a>
+            </div>
+          </article>
+          {% endfor %}
+        </div>
+        <p class="lien-suite"><a href="/livres/">Voir tous les livres</a></p>
+      </div>
+    </section>
+
+    {{ appel(accueil.appel_titre, accueil.appel_texte, accueil.appel_bouton, site.lien_formulaire) }}
+{% endblock %}

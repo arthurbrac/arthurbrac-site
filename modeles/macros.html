@@ -1,0 +1,25 @@
+{# Petites briques réutilisées dans plusieurs pages #}
+
+{% macro photo(chemin, description, tailles="100vw", largeurs=(480, 960), classe="", style="", lazy=True, prioritaire=False) %}
+{% set i = img(chemin, largeurs) %}
+{% if i %}
+<img src="{{ i.src }}" srcset="{{ i.srcset }}" sizes="{{ tailles }}" alt="{{ description }}" width="{{ i.largeur }}" height="{{ i.hauteur }}"{% if classe %} class="{{ classe }}"{% endif %}{% if style %} style="{{ style }}"{% endif %}{% if lazy and not prioritaire %} loading="lazy"{% endif %}{% if prioritaire %} fetchpriority="high"{% endif %}>
+{% endif %}
+{% endmacro %}
+
+{% macro temoignage(t, version="texte") %}
+<figure class="temoignage">
+  <blockquote>{{ ("« " ~ t[version]|trim ~ " »")|md }}</blockquote>
+  <figcaption><strong>{{ t.nom }}</strong>{{ t.fonction }}</figcaption>
+</figure>
+{% endmacro %}
+
+{% macro appel(titre, texte, bouton, lien) %}
+<section class="section appel" aria-labelledby="titre-appel">
+  <div class="conteneur">
+    <h2 id="titre-appel">{{ titre|typo }}</h2>
+    <p>{{ texte|typo }}</p>
+    <a class="bouton" href="{{ lien }}">{{ bouton }}</a>
+  </div>
+</section>
+{% endmacro %}

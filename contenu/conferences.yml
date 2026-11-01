@@ -1,0 +1,189 @@
+# Textes de la page Conférences (modifiables dans Pages CMS > Conférences)
+titre_google: Conférences philosophie et entreprise, sens au travail - Arthur Brac de la Perrière
+description_google: >-
+  Conférencier à Lyon et dans toute la France : philosophie et management, sens
+  au travail, entrepreneuriat. Un chef d'entreprise qui utilise la philosophie,
+  pour vos séminaires, AG et soirées de réseau.
+
+bandeau_photo: /medias/portraits/arthur-mur-beton-nb.jpg
+bandeau_titre: "Conférences : philosophie et entreprise"
+bandeau_texte: >-
+  Un chef d'entreprise qui pense avec les philosophes, pour vos séminaires,
+  assemblées générales et soirées de réseau. Région lyonnaise et toute la France.
+
+approche_titre: Relier l'expérience et la pensée
+approche_texte: |-
+  « Beaucoup de philosophes parlent de l'entreprise, mais peu d'entrepreneurs parlent de philo. » Diplômé d'HEC devenu artisan, puis dirigeant d'une PME de 40 personnes, Arthur part de situations vécues : un litige, un conflit social, une crise de croissance, un choix difficile. Il convoque ensuite les grands penseurs, avec humour et sans jargon, pour aider chacun à prendre de la hauteur et à agir.
+
+  Chaque intervention est adaptée au public et à l'événement : comité de direction, convention de salariés, club de dirigeants, école.
+
+liste:
+  - titre: "L'entrepreneur philosophe : décider, tenir, rebondir avec les grands penseurs"
+    ancre: entrepreneur-philosophe
+    phare: true
+    pour_qui: Pour les clubs de dirigeants, les comités de direction, les assemblées générales, les fonds d'investissement
+    description: >-
+      Que faire face à un client de mauvaise foi, à un conflit social, à un
+      collaborateur malveillant ou à une croissance qui s'emballe ? À partir de
+      cas réels vécus à la tête de son entreprise, Arthur montre comment la
+      philosophie devient une véritable boîte à outils pour décider et garder le cap.
+    points_titre: Le déroulé type
+    points_numerotes: true
+    points:
+      - "D'HEC à artisan : un parcours à la lumière des épicuriens et des stoïciens"
+      - La philosophie, c'est quoi ? Et quel rapport avec l'entreprise ?
+      - Pourquoi entreprendre ? Avec Diogène et Nietzsche
+      - "Face aux problèmes : le litige avec Schopenhauer, le conflit social avec les stoïciens"
+      - "Questions humaines : le racisme avec Voltaire, le salarié malveillant avec Machiavel"
+      - Les clients, une finalité ? Un cas pratique avec Spinoza
+    benefices:
+      - Des repères concrets pour décider dans l'incertitude
+      - Du recul face aux crises et aux conflits
+      - Une autre manière de regarder son métier de dirigeant
+    format: Conférence de 30 à 90 minutes avec questions, ou conférence-interview
+
+  - titre: Donner du sens au travail
+    ancre: sens-au-travail
+    phare: false
+    pour_qui: Pour les conventions et réunions de salariés, les séminaires de managers, les DRH
+    description: >-
+      Pourquoi tant de salariés, et de dirigeants, ont-ils le sentiment que leur
+      travail manque de sens ? Arthur a quitté une carrière confortable pour cette
+      raison. Il raconte comment il a ensuite construit une entreprise devenue
+      société à mission, et ce que les philosophes nous apprennent sur le travail humain.
+    points_titre: Les penseurs mobilisés
+    points_numerotes: false
+    points:
+      - "Simone Weil : l'attention et la dignité du travail"
+      - "Albert Camus : Sisyphe et la révolte, trouver du sens dans l'effort"
+      - "René Girard : le désir mimétique et les rivalités au sein des équipes"
+    benefices:
+      - Mettre des mots sur la quête de sens
+      - Comprendre les ressorts de la motivation et des tensions
+      - Des pistes concrètes, de l'équipe à la raison d'être
+    format: Conférence, table ronde ou atelier
+
+  - titre: "Entreprendre avec sagesse : croissance, écologie, raison d'être"
+    ancre: entreprendre-avec-sagesse
+    phare: false
+    pour_qui: Pour les investisseurs, les comités de direction, les réseaux RSE et d'entrepreneurs
+    description: >-
+      À quoi sert la croissance ? Comment concilier rentabilité, impact écologique
+      et responsabilité envers les équipes ? Arthur interroge ces choix stratégiques
+      à partir de son expérience d'entrepreneur engagé dans la rénovation écologique.
+    points_titre: Les penseurs mobilisés
+    points_numerotes: false
+    points:
+      - "Albert Camus et Emmanuel Kant : questionner la croissance et le devoir"
+      - "Bruno Latour : l'écologie comme cas pratique"
+      - "La société à mission : donner une raison d'être à l'entreprise"
+    benefices:
+      - Un cadre pour interroger sa stratégie et sa croissance
+      - Des exemples vécus d'arbitrages entre impact et rentabilité
+      - Une réflexion sur la raison d'être de l'entreprise
+    format: Conférence ou conférence-interview
+
+formats_titre: Formats et informations pratiques
+formats:
+  - titre: Conférence
+    texte: De 30 à 90 minutes, suivie d'un temps de questions avec la salle.
+  - titre: Table ronde ou interview
+    texte: Un échange animé par un modérateur, idéal pour les soirées de club et de réseau.
+  - titre: Atelier
+    texte: Un temps de travail en groupe à partir de cas concrets, pour les séminaires d'équipe.
+infos_pratiques:
+  - titre: Zone
+    texte: Région lyonnaise en priorité, toute la France. Le train est privilégié.
+  - titre: Technique
+    texte: Un micro suffit. Un écran selon le projet de conférence.
+  - titre: Publics
+    texte: Dirigeants, managers, salariés, réseaux, syndicats, étudiants, lycéens.
+  - titre: Tarif
+    texte: Sur demande, selon le projet et le format.
+
+galerie_titre: En conférence
+galerie:
+  - photo: /medias/conferences/cjd-lyon-salle-2021.png
+    legende: CJD Lyon, plénière au Silex, 2021
+    description: Arthur Brac de la Perrière en conférence devant une salle comble au CJD Lyon
+  - photo: /medias/conferences/hec-ffb-table-ronde-2022.jpg
+    legende: HEC Alumni et FFB, table ronde, 2022
+    description: Table ronde L'entrepreneur philosophe avec Christian Coutenceau, HEC Alumni et FFB
+  - photo: /medias/conferences/capeb-assemblee-generale-2022.png
+    legende: CAPEB Rhône et Grand Lyon, assemblée générale, 2022
+    description: Arthur Brac de la Perrière au micro lors de l'assemblée générale de la CAPEB
+    cadrage: haut
+  - photo: /medias/conferences/cjd-val-d-oise-echange-2023.png
+    legende: CJD Val-d'Oise, 2023
+    description: Arthur Brac de la Perrière échangeant avec des dirigeants du CJD Val-d'Oise
+  - photo: /medias/conferences/cjd-val-de-marne-2021.jpg
+    legende: CJD Val-de-Marne, 2021
+    description: Arthur Brac de la Perrière présenté au public du CJD Val-de-Marne
+  - photo: /medias/conferences/cjd-macon-2022.jpg
+    legende: CJD Mâcon, 2022
+    description: Arthur Brac de la Perrière sur scène au CJD Mâcon, micro en main, à côté de ses livres
+    cadrage: haut
+
+medias_titre: Voir et écouter Arthur
+medias:
+  - type: Vidéo - Cultcheers
+    titre: Capsule n°2, présentée par The Musettes
+    accroche: Un ou des philosophes pour inspirer les entrepreneurs ?
+    lien: https://youtube.com/shorts/4iuUsK2J61Y
+    image: ""
+  - type: Podcast - On a toujours fait comme ça
+    titre: Mieux diriger grâce aux grands philosophes
+    accroche: ""
+    lien: https://youtu.be/JcBOMI2vMQs
+    image: /medias/presse/podcast-on-a-toujours-fait-comme-ca.png
+  - type: Interview - Action Coach
+    titre: Entretien avec Arthur Brac de la Perrière
+    accroche: Philosophie et direction d'entreprise
+    lien: https://youtu.be/ymzHj69FdEE
+    image: ""
+
+references_titre: Plus de 30 interventions depuis 2021
+references_texte: Quelques exemples, classés par type de public.
+references:
+  - categorie: Entreprises et investisseurs
+    lignes:
+      - nom: GMZ & Son's
+        annee: "2026"
+      - nom: Avenir Focus
+        annee: "2025"
+      - nom: Groupe BPCE, avec Shift Consulting
+        annee: "2023"
+      - nom: SOCAM
+        annee: "2022"
+  - categorie: Clubs et réseaux de dirigeants
+    lignes:
+      - nom: Rotary Saint-Étienne
+        annee: "2025"
+      - nom: CJD Lyon, Drôme-Ardèche, Val-d'Oise
+        annee: 2021-2023
+      - nom: CRA, cédants et repreneurs
+        annee: "2023"
+      - nom: Réseau Entreprendre Rhône
+        annee: "2022"
+  - categorie: Fédérations professionnelles
+    lignes:
+      - nom: CAPEB Rhône et Grand Lyon
+        annee: "2022"
+      - nom: FFB, avec HEC Alumni
+        annee: "2022"
+  - categorie: Écoles et universités
+    lignes:
+      - nom: Lycée Pierre Termier
+        annee: 2022-2025
+      - nom: INSA Lyon
+        annee: 2021-2023
+      - nom: HEC Alumni Lyon
+        annee: "2022"
+      - nom: Lyon 3 Manufactory
+        annee: "2022"
+
+agence_texte: Arthur est référencé par l'agence **Conférences Inspiration** sur les thèmes éthique, leadership et management, philosophie, RSE et environnement.
+
+appel_titre: Parlons de votre événement
+appel_texte: "Date, lieu, public, durée : décrivez votre projet en quelques lignes, Arthur vous répond rapidement."
+appel_bouton: Inviter Arthur pour une conférence

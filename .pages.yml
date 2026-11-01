@@ -1,0 +1,182 @@
+# Configuration de l'interface d'édition Pages CMS
+# Chaque entrée ci-dessous devient un menu dans Pages CMS.
+
+media:
+  input: medias
+  output: /medias
+  categories: [image, document]
+
+components:
+  aide_mise_en_forme:
+    type: text
+    description: "Mise en forme possible : *italique* pour un titre de livre, **gras**, [texte du lien](https://adresse). Laisser une ligne vide pour un nouveau paragraphe."
+
+content:
+  - name: accueil
+    label: Accueil
+    type: file
+    path: contenu/accueil.yml
+    format: yaml
+    fields:
+      - { name: titre_google, label: "Titre affiché dans Google", type: string, description: "60 caractères environ" }
+      - { name: description_google, label: "Description affichée dans Google", type: text, description: "150 caractères environ" }
+      - { name: accroche, label: "Grande accroche", type: string }
+      - { name: sous_titre_1, label: "Sous-titre, ligne 1", type: string }
+      - { name: sous_titre_2, label: "Sous-titre, ligne 2", type: string }
+      - { name: introduction, label: "Texte de présentation", component: aide_mise_en_forme }
+      - { name: portrait, label: "Portrait", type: image }
+      - { name: portrait_description, label: "Description du portrait (pour Google et les malvoyants)", type: string }
+      - name: chiffres
+        label: Chiffres clés
+        type: object
+        list: true
+        fields:
+          - { name: nombre, label: "Chiffre", type: string }
+          - { name: texte, label: "Texte", type: string }
+          - { name: texte_2, label: "Deuxième ligne (facultatif)", type: string }
+      - { name: references_titre, label: "Titre des références", type: string }
+      - { name: references_sous_titre, label: "Sous-titre des références", type: string }
+      - { name: references, label: "Références (un nom par ligne)", type: string, list: true }
+      - { name: conferences_titre, label: "Titre du bloc conférences", type: string }
+      - { name: conferences_texte, label: "Texte du bloc conférences", component: aide_mise_en_forme }
+      - name: citation_presse
+        label: Citation de presse
+        type: object
+        fields:
+          - { name: texte, label: "Citation (sans guillemets)", type: text }
+          - { name: source, label: "Source", type: string }
+      - { name: livres_titre, label: "Titre du bloc livres", type: string }
+      - { name: livres_texte, label: "Texte du bloc livres", type: text }
+      - name: livres_en_avant
+        label: Livres mis en avant
+        type: object
+        list: true
+        fields:
+          - { name: titre, label: "Titre", type: string }
+          - { name: etiquette, label: "Petite mention (ex. : Essai, 2021)", type: string }
+          - { name: couverture, label: "Couverture", type: image }
+          - { name: resume, label: "Résumé court", type: text }
+          - { name: lien, label: "Lien vers la page du livre", type: string }
+          - { name: lien_texte, label: "Texte du lien", type: string }
+      - { name: appel_titre, label: "Bandeau final : titre", type: string }
+      - { name: appel_texte, label: "Bandeau final : texte", type: text }
+      - { name: appel_bouton, label: "Texte du bouton d'invitation", type: string }
+
+  - name: conferences
+    label: Conférences
+    type: file
+    path: contenu/conferences.yml
+    format: yaml
+    fields:
+      - { name: titre_google, label: "Titre affiché dans Google", type: string }
+      - { name: description_google, label: "Description affichée dans Google", type: text }
+      - { name: bandeau_photo, label: "Photo du bandeau", type: image }
+      - { name: bandeau_titre, label: "Titre du bandeau", type: string }
+      - { name: bandeau_texte, label: "Texte du bandeau", type: text }
+      - { name: approche_titre, label: "Titre de l'introduction", type: string }
+      - { name: approche_texte, label: "Texte de l'introduction", component: aide_mise_en_forme }
+      - name: liste
+        label: Les conférences
+        type: object
+        list: true
+        fields:
+          - { name: titre, label: "Titre", type: string }
+          - { name: ancre, label: "Identifiant court (sans espace ni accent)", type: string }
+          - { name: phare, label: "Conférence phare ?", type: boolean }
+          - { name: pour_qui, label: "Pour qui", type: string }
+          - { name: description, label: "Description", component: aide_mise_en_forme }
+          - { name: points_titre, label: "Titre de la liste (ex. : Le déroulé type)", type: string }
+          - { name: points_numerotes, label: "Liste numérotée ?", type: boolean }
+          - { name: points, label: "Points de la liste", type: string, list: true }
+          - { name: benefices, label: "Ce que le public en retire", type: string, list: true }
+          - { name: format, label: "Format", type: string }
+      - { name: formats_titre, label: "Titre des formats", type: string }
+      - name: formats
+        label: Formats
+        type: object
+        list: true
+        fields:
+          - { name: titre, label: "Titre", type: string }
+          - { name: texte, label: "Texte", type: text }
+      - name: infos_pratiques
+        label: Informations pratiques
+        type: object
+        list: true
+        fields:
+          - { name: titre, label: "Titre", type: string }
+          - { name: texte, label: "Texte", type: text }
+      - { name: galerie_titre, label: "Titre de la galerie", type: string }
+      - name: galerie
+        label: Galerie de photos
+        type: object
+        list: true
+        fields:
+          - { name: photo, label: "Photo", type: image }
+          - { name: legende, label: "Légende", type: string }
+          - { name: description, label: "Description (pour Google et les malvoyants)", type: string }
+          - name: cadrage
+            label: "Cadrage (photo verticale : choisir « haut »)"
+            type: select
+            options: { values: ["", "haut"] }
+      - { name: medias_titre, label: "Titre vidéos et podcasts", type: string }
+      - name: medias
+        label: Vidéos et podcasts
+        type: object
+        list: true
+        fields:
+          - { name: type, label: "Type et média (ex. : Podcast - Nom)", type: string }
+          - { name: titre, label: "Titre", type: string }
+          - { name: accroche, label: "Phrase affichée si pas d'image", type: string }
+          - { name: lien, label: "Lien (YouTube, etc.)", type: string }
+          - { name: image, label: "Image (facultatif)", type: image }
+      - { name: references_titre, label: "Titre des références", type: string }
+      - { name: references_texte, label: "Texte des références", type: string }
+      - name: references
+        label: Références par public
+        type: object
+        list: true
+        fields:
+          - { name: categorie, label: "Catégorie", type: string }
+          - name: lignes
+            label: Références
+            type: object
+            list: true
+            fields:
+              - { name: nom, label: "Organisme", type: string }
+              - { name: annee, label: "Année(s)", type: string }
+      - { name: agence_texte, label: "Texte sur l'agence", component: aide_mise_en_forme }
+      - { name: appel_titre, label: "Bandeau final : titre", type: string }
+      - { name: appel_texte, label: "Bandeau final : texte", type: text }
+      - { name: appel_bouton, label: "Texte du bouton", type: string }
+
+  - name: temoignages
+    label: Témoignages
+    type: file
+    path: contenu/temoignages.yml
+    format: yaml
+    fields:
+      - name: temoignages
+        label: Témoignages d'organisateurs
+        type: object
+        list: true
+        fields:
+          - { name: nom, label: "Nom", type: string }
+          - { name: fonction, label: "Fonction et organisme", type: string }
+          - { name: version_courte, label: "Version courte (accueil)", type: text }
+          - { name: texte, label: "Version complète (page Conférences)", component: aide_mise_en_forme }
+
+  - name: reglages
+    label: Réglages du site
+    type: file
+    path: contenu/site.yml
+    format: yaml
+    fields:
+      - { name: nom, label: "Nom du site", type: string }
+      - { name: email, label: "Adresse e-mail", type: string }
+      - { name: linkedin, label: "Lien LinkedIn", type: string }
+      - { name: instagram, label: "Lien Instagram", type: string }
+      - { name: babelio, label: "Lien Babelio", type: string }
+      - { name: agence_nom, label: "Nom de l'agence", type: string }
+      - { name: agence_lien, label: "Lien vers la fiche de l'agence", type: string }
+      - { name: bouton_invitation, label: "Texte du bouton du menu", type: string }
+      - { name: lien_formulaire, label: "Lien du bouton d'invitation", type: string }

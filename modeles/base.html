@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{{ titre_google }}</title>
+  <meta name="description" content="{{ description_google }}">
+  <link rel="canonical" href="{{ url_site }}{{ adresse }}">
+
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="fr_FR">
+  <meta property="og:site_name" content="{{ site.nom }}">
+  <meta property="og:title" content="{{ titre_partage or titre_google }}">
+  <meta property="og:description" content="{{ description_google }}">
+  <meta property="og:url" content="{{ url_site }}{{ adresse }}">
+  <meta property="og:image" content="{{ url_site }}/assets/img/partage.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <link rel="preload" href="/assets/fonts/lora-var.woff" as="font" type="font/woff" crossorigin>
+  <link rel="stylesheet" href="/assets/css/style.css">
+  <link rel="icon" href="/assets/img/favicon.svg" type="image/svg+xml">
+  {% block donnees_structurees %}{% endblock %}
+</head>
+<body>
+  <a class="lien-evitement" href="#contenu">Aller au contenu</a>
+
+  <header class="entete">
+    <div class="conteneur entete__barre">
+      <a class="marque" href="/">{{ site.nom }}</a>
+      <button class="menu-bouton" type="button" aria-expanded="false" aria-controls="menu">Menu</button>
+      <nav class="nav" id="menu" aria-label="Menu principal">
+        <ul>
+          {% for cle, libelle in [("conferences", "Conférences"), ("livres", "Livres"), ("a-propos", "À propos"), ("presse", "Presse")] %}
+          <li><a href="/{{ cle }}/"{% if actif == cle %} aria-current="page"{% endif %}>{{ libelle }}</a></li>
+          {% endfor %}
+          <li><a class="bouton" href="{{ site.lien_formulaire }}">{{ site.bouton_invitation }}</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="contenu">
+{% block contenu %}{% endblock %}
+  </main>
+
+  <footer class="pied">
+    <div class="conteneur">
+      <div class="pied__grille">
+        <ul>
+          <li><a href="/conferences/">Conférences</a></li>
+          <li><a href="/livres/">Livres</a></li>
+          <li><a href="/a-propos/">À propos</a></li>
+          <li><a href="/presse/">Presse</a></li>
+          <li><a href="/contact/">Contact</a></li>
+        </ul>
+        <ul>
+          <li><a href="{{ site.linkedin }}" rel="noopener">LinkedIn</a></li>
+          <li><a href="{{ site.instagram }}" rel="noopener">Instagram</a></li>
+          <li><a href="/mentions-legales/">Mentions légales</a></li>
+        </ul>
+      </div>
+      <p class="pied__mention">© {{ annee }} {{ site.nom }}. Site sans cookies ni traceurs.</p>
+    </div>
+  </footer>
+
+  <script src="/assets/js/menu.js" defer></script>
+</body>
+</html>
