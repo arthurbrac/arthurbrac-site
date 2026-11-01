@@ -358,3 +358,47 @@ p { margin: 0 0 1em; }
 .autres h3 a { color: var(--encre); text-decoration: none; }
 .autres h3 a:hover { color: var(--accent-fonce); }
 .heros__texte p:last-child { margin-bottom: 0; }
+
+/* ---------- Page Livres ---------- */
+.heros--page { padding-top: 12px; }
+.ariane--haut { padding: 0 0 20px; }
+.titre-page { font-family: var(--serif); font-size: clamp(2.2rem, 1.4rem + 3vw, 3.4rem); color: var(--encre); margin: 0 0 18px; }
+.sommaire-genres { list-style: none; padding: 0; margin: 26px 0 0; display: flex; flex-wrap: wrap; gap: 10px; }
+.sommaire-genres a { display: inline-block; padding: 7px 16px; border: 1px solid var(--trait); border-radius: 999px; background: var(--blanc); color: var(--encre); text-decoration: none; font-weight: 600; font-size: 0.95rem; }
+.sommaire-genres a:hover { border-color: var(--accent); color: var(--accent-fonce); }
+
+.livres-liste { display: grid; gap: 28px; }
+.livre { display: grid; grid-template-columns: 220px 1fr; gap: clamp(20px, 4vw, 44px); background: var(--blanc); border: 1px solid var(--trait); border-radius: var(--rayon); padding: clamp(20px, 3.5vw, 36px); scroll-margin-top: 90px; }
+.livre__couverture img { border-radius: 6px; box-shadow: 0 8px 22px rgba(31, 42, 68, 0.2); }
+.livre h3 { font-size: clamp(1.4rem, 1.1rem + 1vw, 1.8rem); margin-bottom: 6px; }
+.livre h3 a { color: var(--encre); text-decoration: none; }
+.livre h3 a:hover { color: var(--accent-fonce); }
+.livre__meta { color: var(--encre-douce); font-size: 0.95rem; margin-bottom: 14px; }
+.livre__meta strong { color: var(--accent-fonce); }
+.livre__citation, .livre__avis { margin: 18px 0; padding-left: 18px; border-left: 3px solid var(--accent); }
+.livre__citation blockquote, .livre__avis blockquote { margin: 0; }
+.livre__citation p, .livre__avis p { font-family: var(--serif); font-style: italic; margin-bottom: 4px; }
+.livre__citation figcaption, .livre__avis figcaption { font-size: 0.9rem; color: var(--encre-douce); }
+.livre__liens { display: flex; flex-wrap: wrap; gap: 10px 22px; align-items: center; margin: 20px 0 0; }
+.livre__liens a:not(.bouton) { font-weight: 600; }
+.livre__epuise { color: var(--encre-douce); font-size: 0.95rem; }
+.poeme { margin-top: 16px; background: var(--papier); border-radius: 10px; padding: 12px 18px; }
+.poeme summary { cursor: pointer; font-weight: 600; color: var(--accent-fonce); }
+.poeme h4 { font-family: var(--serif); font-size: 1.15rem; margin: 18px 0 8px; }
+.poeme p { font-family: var(--serif); font-size: 1.05rem; line-height: 1.7; }
+@media (max-width: 640px) { .livre { grid-template-columns: 1fr; } .livre__couverture { max-width: 180px; } }
+
+.duo-photos { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; margin-top: 20px; }
+.duo-photos img { border-radius: var(--rayon); width: 100%; aspect-ratio: 4 / 3; object-fit: cover; }
+@media (max-width: 700px) { .duo-photos { grid-template-columns: 1fr; } }
+
+/* ---------- Fiche d'un livre ---------- */
+.fiche-livre { padding-top: 12px; }
+.fiche-livre__grille { display: grid; grid-template-columns: 380px 1fr; gap: clamp(28px, 5vw, 64px); align-items: start; }
+.fiche-livre__couverture img { border-radius: 8px; box-shadow: 0 12px 32px rgba(31, 42, 68, 0.22); }
+.fiche-livre__resume { font-size: 1.1rem; }
+.petit { font-size: 0.92rem; color: var(--encre-douce); margin-top: 10px; }
+.citation--seconde { margin-top: 48px; }
+.citation--seconde p { font-size: clamp(1.2rem, 1rem + 1vw, 1.6rem); }
+@media (max-width: 760px) { .fiche-livre__grille { grid-template-columns: 1fr; } .fiche-livre__couverture { max-width: 260px; } }
+.heros h1.titre-page { font-family: var(--serif); font-size: clamp(2.2rem, 1.4rem + 3vw, 3.4rem); color: var(--encre); line-height: 1.1; margin: 0 0 18px; }

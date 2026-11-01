@@ -149,6 +149,75 @@ content:
       - { name: appel_texte, label: "Bandeau final : texte", type: text }
       - { name: appel_bouton, label: "Texte du bouton", type: string }
 
+  - name: livres
+    label: Livres
+    type: file
+    path: contenu/livres.yml
+    format: yaml
+    fields:
+      - { name: titre_google, label: "Titre affiché dans Google", type: string }
+      - { name: description_google, label: "Description affichée dans Google", type: text }
+      - { name: titre, label: "Titre de la page", type: string }
+      - { name: introduction, label: "Introduction", component: aide_mise_en_forme }
+      - { name: photo, label: "Photo de la page", type: image }
+      - { name: photo_description, label: "Description de la photo", type: string }
+      - name: photos_librairie
+        label: Photos en librairie
+        type: object
+        list: true
+        fields:
+          - { name: photo, label: "Photo", type: image }
+          - { name: description, label: "Description", type: string }
+      - { name: lien_poemes, label: "Lien vers les poèmes non publiés", type: string }
+      - name: livres
+        label: Les livres (dans l'ordre d'affichage)
+        type: object
+        list: true
+        fields:
+          - { name: titre, label: "Titre", type: string, required: true }
+          - { name: adresse, label: "Adresse de la page (minuscules, tirets, sans accent)", type: string, description: "ex. : la-pierre-interieure" }
+          - name: genre
+            label: Genre
+            type: select
+            options: { values: ["Roman philosophique", "Essai", "Roman", "Poésie"] }
+          - { name: annee, label: "Année de parution", type: string }
+          - { name: a_paraitre, label: "À paraître ?", type: boolean }
+          - { name: mention, label: "Mention sous le titre (ex. : Roman, 2019)", type: string }
+          - { name: editeur, label: "Éditeur", type: string }
+          - { name: details, label: "Précisions (préface, collaboration…)", type: string }
+          - { name: isbn, label: "ISBN (13 chiffres, sans tirets)", type: string }
+          - { name: couverture, label: "Couverture", type: image }
+          - { name: resume_court, label: "Résumé court (une phrase)", type: text }
+          - { name: resume, label: "Résumé", component: aide_mise_en_forme }
+          - { name: texte_complementaire, label: "Texte complémentaire (facultatif)", component: aide_mise_en_forme }
+          - name: citations
+            label: Citations de presse ou de jury
+            type: object
+            list: true
+            fields:
+              - { name: texte, label: "Citation (sans guillemets)", type: text }
+              - { name: source, label: "Source", type: string }
+          - name: avis
+            label: Avis de lecteurs
+            type: object
+            list: true
+            fields:
+              - { name: texte, label: "Avis (sans guillemets)", type: text }
+              - { name: auteur, label: "Auteur et site", type: string }
+              - { name: lien, label: "Lien vers l'avis", type: string }
+          - { name: extrait_titre, label: "Titre du poème ou de l'extrait", type: string }
+          - { name: extrait, label: "Poème ou extrait (retours à la ligne conservés)", type: text }
+          - { name: extrait_2_titre, label: "Titre du 2e poème", type: string }
+          - { name: extrait_2, label: "2e poème", type: text }
+          - name: liens
+            label: Liens d'achat
+            type: object
+            list: true
+            fields:
+              - { name: libelle, label: "Texte du lien (ex. : Decitre)", type: string }
+              - { name: url, label: "Adresse", type: string }
+          - { name: page_detaillee, label: "Page dédiée pour ce livre ?", type: boolean }
+
   - name: temoignages
     label: Témoignages
     type: file

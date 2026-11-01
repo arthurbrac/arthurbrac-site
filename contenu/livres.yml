@@ -1,0 +1,289 @@
+# Les livres (modifiables dans Pages CMS > Livres)
+# Pour ajouter un livre : Pages CMS > Livres > « Ajouter » en bas de la liste.
+titre_google: Livres - romans, essai, poésie - Arthur Brac de la Perrière
+description_google: >-
+  Les livres d'Arthur Brac de la Perrière : Rhapsodie pour une humanité, L'entrepreneur
+  philosophe, La pierre intérieure (prix ARAL 2020), romans et carnets de voyage en poèmes.
+titre: Les livres
+introduction: >-
+  Poète voyageur à ses débuts, puis romancier et essayiste, Arthur Brac de la
+  Perrière écrit depuis plus de vingt ans. Des carnets de voyage aux romans, une
+  même question traverse ses livres : comment habiter le monde moderne ?
+photo: /medias/portraits/arthur-cafe.jpg
+photo_description: Arthur Brac de la Perrière écrivant dans un café, un livre ouvert et un stylo à la main
+photos_librairie:
+  - photo: /medias/presse/vitrine-librairie.jpg
+    description: L'entrepreneur philosophe en vitrine d'une librairie
+  - photo: /medias/presse/table-librairie.jpg
+    description: L'entrepreneur philosophe sur une table de librairie, parmi les essais sur l'entreprise
+lien_poemes: http://arthurpoesie.hautetfort.com/poemes-mediterraneen/
+
+livres:
+  - titre: Rhapsodie pour une humanité
+    adresse: rhapsodie-pour-une-humanite
+    genre: Roman philosophique
+    annee: "2026"
+    a_paraitre: true
+    mention: À paraître en décembre 2026
+    editeur: Les Passionnés de Bouquins
+    details: ""
+    isbn: ""
+    couverture: /medias/couvertures/rhapsodie-pour-une-humanite.png
+    resume_court: "Un roman philosophique à Lyon : une professeure d'histoire, un élève poète, une doctorante et un musicien fondent un collectif pour rendre l'avenir désirable."
+    resume: |-
+      Hannah est une jeune professeure d'histoire. Elle rencontre Albert, élève de terminale, redoublant, poète et lecteur passionné. Entre eux, tout commence par un désaccord. Ils discutent, se disputent, se répondent. D'une querelle entre morale et mémoire naît une question qui ne les lâchera plus : comment lire le monde, et comment comprendre l'humain ?
+
+      Bientôt, ils ne sont plus deux. Frédéric, musicien, et Simone, doctorante en philosophie, s'invitent dans leurs débats. L'alchimie transforme leurs conversations en un projet : les quatre amis fondent un collectif pour influer sur la société.
+
+      Esprit de résistance, éveil à la vulnérabilité, soif de liberté, pouvoir des symboles et amour défendu… Au fil de leur aventure, une question se pose au lecteur : que sommes-nous prêts à faire, ici et maintenant, pour rendre l'avenir désirable ?
+    texte_complementaire: |-
+      Le roman se déroule à Lyon, de nos jours. Ses quatre personnages principaux, Hannah, Albert, Simone et Frédéric, sont inspirés de quatre penseurs des XIXe et XXe siècles : Hannah Arendt, Albert Camus, Simone Weil et Friedrich Nietzsche. Le roman s'inspire librement de ces figures, sans prétendre interpréter leur pensée ni éclairer leur œuvre. Il imagine plutôt ce que pourraient être leurs héritiers du XXIe siècle, réunis par le hasard pour réfléchir ensemble et agir sur le monde.
+    citations: []
+    avis: []
+    extrait_titre: ""
+    extrait: ""
+    extrait_2_titre: ""
+    extrait_2: ""
+    liens:
+      - libelle: Chez l'éditeur
+        url: https://les-passionnes-de-bouquins.com/catalogue/arthur%20brac/#/
+    page_detaillee: true
+
+  - titre: L'entrepreneur philosophe
+    adresse: l-entrepreneur-philosophe
+    genre: Essai
+    annee: "2021"
+    a_paraitre: false
+    mention: Essai, 2021
+    editeur: Les Passionnés de Bouquins
+    details: Préfaces de Sabine Basili et Emmanuel Gabellieri
+    isbn: "9782363511171"
+    couverture: /medias/couvertures/l-entrepreneur-philosophe.jpg
+    resume_court: Le quotidien d'un patron de PME, avec la philosophie comme boîte à outils pour penser et agir. Le livre à l'origine des conférences.
+    resume: >-
+      L'entreprise et la philosophie. Deux mondes a priori opposés. Et pourtant,
+      fort de son expérience de dirigeant, Arthur Brac de la Perrière propose des
+      passerelles entre ces deux univers. Dans son quotidien de patron de PME, il
+      utilise la philosophie et ses concepts comme une véritable boîte à outils pour
+      faire de l'entrepreneuriat une matière permettant de penser et agir. Ce livre
+      témoignage, fondé sur des exemples concrets, propose des ressources originales
+      pour l'entreprise.
+    texte_complementaire: >-
+      Ce livre est à l'origine des conférences d'Arthur : il y raconte les litiges,
+      les conflits, les crises de croissance et les choix difficiles d'une PME du
+      bâtiment, et ce que Spinoza, Leibniz, Sartre, les stoïciens ou les épicuriens
+      lui ont appris pour les traverser.
+    citations:
+      - texte: On referme ces pages avec une vision remarquablement concrète du métier d'entrepreneur… et une réelle dose de compassion. Un regard singulier et stimulant.
+        source: "*Les Échos*, Gabriel Grésillon"
+      - texte: Humour, érudition, pertinence du regard sur la vie d'une entreprise.
+        source: "*Le Progrès*, Sylvie Silvestre"
+    avis:
+      - texte: On m'a offert ce livre que j'ai dévoré ! Passionnant récit sur le quotidien d'un chef d'entreprise artisanale… avec ses réflexions philosophiques qui l'aident à prendre de la hauteur. Un ouvrage de référence, pour les entrepreneurs, comme pour les employés et les clients ! Je l'ai racheté pour l'offrir à d'autres !
+        auteur: Fred P., lecteur sur Decitre
+        lien: https://www.decitre.fr/livres/l-entrepreneur-philosophe-9782363511171.html
+    extrait_titre: ""
+    extrait: ""
+    extrait_2_titre: ""
+    extrait_2: ""
+    liens:
+      - libelle: Chez l'éditeur
+        url: https://les-passionnes-de-bouquins.com/catalogue/arthur%20brac/#/
+      - libelle: Decitre
+        url: https://www.decitre.fr/livres/l-entrepreneur-philosophe-9782363511171.html
+    page_detaillee: true
+
+  - titre: La pierre intérieure
+    adresse: la-pierre-interieure
+    genre: Roman
+    annee: "2019"
+    a_paraitre: false
+    mention: Roman, 2019 - Prix littéraire ARAL 2020
+    editeur: Les Passionnés de Bouquins
+    details: ""
+    isbn: "9782363510853"
+    couverture: /medias/couvertures/la-pierre-interieure.jpg
+    resume_court: Une Parisienne pressée, un tailleur de pierre creusois, une statue mystérieuse. Un roman sur le sens du travail.
+    resume: >-
+      Célyne, Parisienne à la vie trépidante, croise une statue mystérieuse dans la
+      Creuse, puis Gilbert, tailleur de pierre ; deux mondes éloignés cherchent
+      ensemble leur chemin. Un roman sur le sens du travail et la manière d'habiter
+      le monde moderne.
+    texte_complementaire: >-
+      Prix littéraire ARAL 2020. [Voir le discours de remise du prix](https://youtu.be/d8CsFi4t5vg)
+      ou [lire le texte du jury](/medias/documents/discours-aral-2020.pdf) (PDF).
+    citations:
+      - texte: L'art d'Arthur Brac de la Perrière se trouve en partie dans cette manière qu'il a de soulever des questions philosophiques sur l'identité sans passer par le didactisme.
+        source: Gérard Peylet, au nom du jury du prix ARAL 2020
+      - texte: Votre lecteur a l'impression heureuse que vous avez écrit ce texte sous l'impulsion d'une nécessité intérieure. Cela ne s'invente pas.
+        source: Gérard Peylet, au nom du jury du prix ARAL 2020
+    avis:
+      - texte: J'ai dévoré ce livre en un dimanche, avec plein de remises en question et d'envies de changement une fois la dernière page tournée ! Une histoire très bien écrite, des pages de valeurs.
+        auteur: Antoine C., lecteur sur Decitre
+        lien: https://www.decitre.fr/livres/la-pierre-interieure-9782363510853.html
+    extrait_titre: ""
+    extrait: ""
+    extrait_2_titre: ""
+    extrait_2: ""
+    liens:
+      - libelle: Chez l'éditeur
+        url: https://les-passionnes-de-bouquins.com/catalogue/arthur%20brac/#/
+      - libelle: Decitre
+        url: https://www.decitre.fr/livres/la-pierre-interieure-9782363510853.html
+    page_detaillee: false
+
+  - titre: La pieuvre de Lhassa
+    adresse: la-pieuvre-de-lhassa
+    genre: Roman
+    annee: "2011"
+    a_paraitre: false
+    mention: Conte politique, 2011
+    editeur: Edilivre
+    details: ""
+    isbn: "9782812148651"
+    couverture: /medias/couvertures/la-pieuvre-de-lhassa.jpg
+    resume_court: Oscar part sauver le Tibet.
+    resume: >-
+      Oscar, qui a plus de cœur que de raison, part sauver le Tibet. Avec fougue et
+      innocence, il cherche à convaincre les grands de ce monde, du pape aux
+      rockstars, et finit par ouvrir son cœur au monde et à une femme.
+    texte_complementaire: ""
+    citations: []
+    avis: []
+    extrait_titre: ""
+    extrait: ""
+    extrait_2_titre: ""
+    extrait_2: ""
+    liens:
+      - libelle: Chez l'éditeur
+        url: https://les-passionnes-de-bouquins.com/catalogue/arthur%20brac/#/
+    page_detaillee: false
+
+  - titre: La Terre est un poème
+    adresse: la-terre-est-un-poeme
+    genre: Roman
+    annee: "2006"
+    a_paraitre: false
+    mention: Roman, 2006
+    editeur: Lettres du Monde
+    details: ""
+    isbn: "9782730102063"
+    couverture: /medias/couvertures/la-terre-est-un-poeme.jpg
+    resume_court: Deux amis d'enfance, l'un en vers, l'autre en prose.
+    resume: >-
+      Oscar, idéaliste désespéré, parle en vers ; Abel, pragmatique satisfait,
+      répond en prose. De Paris à Cuba et au Cachemire, ces deux amis d'enfance se
+      disputent sur une question : peut-on concilier le rêve et le bien-être ?
+    texte_complementaire: ""
+    citations:
+      - texte: Quelques grammes de finesse dans un monde de brutes ? Lorsque voyage rime avec poésie…
+        source: "Lonely Planet, *Comète*, juin 2006"
+    avis: []
+    extrait_titre: ""
+    extrait: ""
+    extrait_2_titre: ""
+    extrait_2: ""
+    liens: []
+    page_detaillee: false
+
+  - titre: L'Asie centrale poétique. Prose et vers
+    adresse: l-asie-centrale-poetique
+    genre: Poésie
+    annee: "2012"
+    a_paraitre: false
+    mention: Carnet de voyage en poèmes, 2012
+    editeur: BoD
+    details: Avec la collaboration de Sabine Bord et Marc Lasserre
+    isbn: "9782810613922"
+    couverture: /medias/couvertures/l-asie-centrale-poetique.jpg
+    resume_court: Carnet de voyage en poèmes à travers l'Asie centrale.
+    resume: Carnet de voyage en poèmes à travers l'Asie centrale, du Kirghizstan à l'Ouzbékistan, de la mer d'Aral à Samarkand.
+    texte_complementaire: ""
+    citations: []
+    avis: []
+    extrait_titre: Mer d'Aral
+    extrait: |-
+      J'ai marché sur les fonds marins
+      sous un soleil lourd de chagrin
+      dans des miettes de coquillages
+      aux parfums des anciens sillages.
+
+      J'ai vu sur le port des bateaux mourir de sable
+      en pleurant à jamais une mère ineffable
+      j'ai vu le sel et la soif de la mer d'Aral,
+      dans la poussière aride d'une grande barrière de rocaille.
+
+      J'ai vu un vieux fleuve étranglé
+      derrière l'estuaire délavé
+      j'ai su au désert amarré
+      qu'il n'y aurait plus qu'une marée.
+    extrait_2_titre: La pêche
+    extrait_2: |-
+      Le soleil s'est jeté dans la rivière
+      là où les eaux s'allongent.
+
+      Un enfant s'assied sur des nuages d'ombres
+      et transperce le temps d'un fil de soie
+      jeté dans les flots sereins et opaques.
+
+      Au-dessus des gouttelettes mélodieuses,
+      les astres ne bougent plus.
+
+      Des ondes fabriquent les secondes d'eau
+      d'une horloge suspendue
+      aux profondeurs des courants intérieurs.
+    liens:
+      - libelle: Fnac
+        url: https://www.fnac.com/a4759657/Arthur-Brac-de-la-Perriere-L-Asie-centrale-poetique
+    page_detaillee: false
+
+  - titre: Les Rimes du monde
+    adresse: les-rimes-du-monde
+    genre: Poésie
+    annee: "2003"
+    a_paraitre: false
+    mention: Poésie, 2003
+    editeur: Lettres du Monde
+    details: ""
+    isbn: ""
+    couverture: /medias/couvertures/les-rimes-du-monde.jpg
+    resume_court: Un carnet de voyage en poèmes sur trois continents.
+    resume: >-
+      Un carnet de voyage en poèmes à travers l'Asie, l'Afrique et l'Amérique du
+      Sud. Au fil de missions solidaires, de Manille à la Côte d'Ivoire en passant
+      par la Thaïlande, les vers disent l'émerveillement, la révolte et l'espoir, à
+      la rencontre des femmes et des hommes.
+    texte_complementaire: ""
+    citations: []
+    avis: []
+    extrait_titre: Instants
+    extrait: |-
+      Que deviendront demain ces improbables instants
+      Quand de ma mémoire ils iront s'évaporant ?
+      Car sans fin, les instants de ma mémoire s'échangent
+      Pour regagner très doucement la part des anges.
+
+      Je traverse ces instants dont me dépouille le temps,
+      Qu'ils me traversent, qu'ils me traversent encore longtemps.
+      Que les instants me piquent et s'en aillent, que je change !
+      Un jour je m'y noierai en gagnant ma part d'ange.
+    extrait_2_titre: L'heure d'été
+    extrait_2: |-
+      Voyage arrête-toi
+      et laisse goûter ce thé sur mes lèvres.
+      Ne me quitte pas
+      et remplis mes yeux de tes histoires.
+
+      Ne m'abandonne pas,
+      reste encore un peu,
+      le temps que j'oublie
+      que j'ai été cet homme.
+
+      Le temps que j'oublie
+      les murs de ma vie,
+      l'usure de mes couloirs
+      et l'heure de mon sommeil.
+    liens:
+      - libelle: Avis des lecteurs sur Fnac
+        url: https://www.fnac.com/a1509171/Arthur-Brac-de-la-Perriere-Les-rimes-du-monde
+    page_detaillee: false

@@ -1,0 +1,116 @@
+{% extends "base.html" %}
+{% from "macros.html" import photo, appel %}
+{% set l = livre %}
+{% set titre_google = l.titre ~ " - " ~ l.genre ~ " d'Arthur Brac de la Perrière" %}
+{% set description_google = l.resume_court ~ " " ~ l.editeur ~ (", " ~ l.annee if not l.a_paraitre else ", " ~ l.mention|lower) ~ "." %}
+{% set adresse = "/livres/" ~ l.adresse ~ "/" %}
+
+{% block donnees_structurees %}
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Book",
+        "name": {{ l.titre|tojson }},
+        "author": { "@type": "Person", "@id": "{{ url_site }}/#arthur", "name": "{{ site.nom }}", "url": "{{ url_site }}/" },
+        "publisher": { "@type": "Organization", "name": {{ l.editeur|tojson }} },
+        "datePublished": "{{ l.annee }}",
+        "genre": {{ l.genre|tojson }},
+        "inLanguage": "fr",
+        "description": {{ l.resume_court|tojson }},
+        {% if l.isbn %}"isbn": "{{ l.isbn }}",{% endif %}
+        {% set i = img(l.couverture, (640,)) %}{% if i %}"image": "{{ url_site }}{{ i.src }}",{% endif %}
+        "url": "{{ url_site }}{{ adresse }}"
+      },
+      {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          { "@type": "ListItem", "position": 1, "name": "Accueil", "item": "{{ url_site }}/" },
+          { "@type": "ListItem", "position": 2, "name": "Livres", "item": "{{ url_site }}/livres/" },
+          { "@type": "ListItem", "position": 3, "name": {{ l.titre|tojson }}, "item": "{{ url_site }}{{ adresse }}" }
+        ]
+      }
+    ]
+  }
+  </script>
+{% endblock %}
+
+{% block contenu %}
+    <section class="section fiche-livre">
+      <div class="conteneur">
+        <nav class="ariane ariane--haut" aria-label="Fil d'Ariane"><ol><li><a href="/">Accueil</a></li><li><a href="/livres/">Livres</a></li><li>{{ l.titre }}</li></ol></nav>
+        <div class="fiche-livre__grille">
+          <div class="fiche-livre__couverture">
+            {{ photo(l.couverture, "Couverture de " ~ l.titre, "(max-width: 760px) 260px, 380px", (400, 800), prioritaire=True) }}
+          </div>
+          <div>
+            <p class="livre__meta">{% if l.a_paraitre %}<strong>{{ l.mention }}</strong>{% else %}{{ l.genre }}, {{ l.annee }}{% endif %} - {{ l.editeur }}</p>
+            <h1 class="titre-page">{{ l.titre }}</h1>
+            {% if l.details %}<p class="livre__meta">{{ l.details }}</p>{% endif %}
+            <div class="fiche-livre__resume">{{ l.resume|md }}</div>
+            {% if l.liens %}
+            <p class="livre__liens">
+              {% for lien in l.liens %}<a class="bouton{% if not loop.first %} bouton--secondaire{% endif %}" href="{{ lien.url }}" rel="noopener">{{ lien.libelle }}</a>{% endfor %}
+            </p>
+            <p class="petit">Ou dans votre librairie, sur commande.</p>
+            {% endif %}
+          </div>
+        </div>
+      </div>
+    </section>
+
+    {% if l.texte_complementaire %}
+    <section class="section section--sable" aria-labelledby="titre-complement">
+      <div class="conteneur section__intro">
+        <h2 id="titre-complement">{% if l.genre == "Essai" %}Le livre à l'origine des conférences{% else %}Autour du roman{% endif %}</h2>
+        {{ l.texte_complementaire|md }}
+        {% if l.genre == "Essai" %}<p><a class="bouton" href="/conferences/">Découvrir les conférences</a></p>{% endif %}
+      </div>
+    </section>
+    {% endif %}
+
+    {% if l.citations %}
+    <section class="section" aria-labelledby="titre-presse">
+      <div class="conteneur">
+        <h2 id="titre-presse" class="visuellement-cache">Ce qu'en dit la presse</h2>
+        {% for c in l.citations %}
+        <figure class="citation{% if not loop.first %} citation--seconde{% endif %}">
+          <blockquote>{{ ("« " ~ c.texte ~ " »")|md }}</blockquote>
+          <figcaption>{{ c.source|md_ligne }}</figcaption>
+        </figure>
+        {% endfor %}
+      </div>
+    </section>
+    {% endif %}
+
+    {% if l.avis %}
+    <section class="section section--sable" aria-labelledby="titre-avis">
+      <div class="conteneur">
+        <h2 id="titre-avis">L'avis des lecteurs</h2>
+        <div class="temoignages">
+          {% for a in l.avis %}
+          <figure class="temoignage"><blockquote>{{ ("« " ~ a.texte ~ " »")|md }}</blockquote><figcaption>{% if a.lien %}<a href="{{ a.lien }}" rel="noopener">{{ a.auteur }}</a>{% else %}{{ a.auteur }}{% endif %}</figcaption></figure>
+          {% endfor %}
+        </div>
+      </div>
+    </section>
+    {% endif %}
+
+    {% if l.genre == "Essai" and livres.photos_librairie %}
+    <section class="section" aria-labelledby="titre-librairie">
+      <div class="conteneur">
+        <h2 id="titre-librairie">En librairie</h2>
+        <div class="duo-photos">
+          {% for p in livres.photos_librairie %}{{ photo(p.photo, p.description, "(max-width: 700px) 100vw, 540px", (600, 1100)) }}{% endfor %}
+        </div>
+      </div>
+    </section>
+    {% endif %}
+
+    <section class="section">
+      <div class="conteneur"><p><a href="/livres/">← Tous les livres</a></p></div>
+    </section>
+
+    {{ appel("Rencontrer l'auteur", "Conférence, rencontre en librairie, soirée de club : parlons de votre projet.", "Contacter Arthur", site.lien_formulaire) }}
+{% endblock %}

@@ -1,0 +1,111 @@
+{% extends "base.html" %}
+{% from "macros.html" import photo, appel %}
+{% set L = livres %}
+{% set titre_google = L.titre_google %}
+{% set description_google = L.description_google %}
+{% set adresse = "/livres/" %}
+
+{% block donnees_structurees %}
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ItemList",
+    "name": "Livres d'Arthur Brac de la Perrière",
+    "itemListElement": [
+      {% for l in L.livres %}
+      {
+        "@type": "ListItem", "position": {{ loop.index }},
+        "item": {
+          "@type": "Book",
+          "name": {{ l.titre|tojson }},
+          "author": { "@type": "Person", "@id": "{{ url_site }}/#arthur", "name": "{{ site.nom }}" },
+          "publisher": { "@type": "Organization", "name": {{ l.editeur|tojson }} },
+          "datePublished": "{{ l.annee }}",
+          "genre": {{ l.genre|tojson }},
+          "inLanguage": "fr"{% if l.isbn %},
+          "isbn": "{{ l.isbn }}"{% endif %},
+          "url": "{{ url_site }}{% if l.page_detaillee %}/livres/{{ l.adresse }}/{% else %}/livres/#{{ l.adresse }}{% endif %}"
+        }
+      }{% if not loop.last %},{% endif %}
+      {% endfor %}
+    ]
+  }
+  </script>
+{% endblock %}
+
+{% block contenu %}
+    <section class="heros heros--page">
+      <div class="conteneur heros__grille">
+        <div>
+          <nav class="ariane ariane--haut" aria-label="Fil d'Ariane"><ol><li><a href="/">Accueil</a></li><li>Livres</li></ol></nav>
+          <h1 class="titre-page">{{ L.titre }}</h1>
+          <div class="heros__texte">{{ L.introduction|md }}</div>
+          <ul class="sommaire-genres">
+            {% for g in L.livres|map(attribute="genre")|unique %}<li><a href="#genre-{{ loop.index }}">{{ g }}</a></li>{% endfor %}
+          </ul>
+        </div>
+        <div class="heros__portrait">
+          {{ photo(L.photo, L.photo_description, "(max-width: 880px) 240px, 450px", (480, 800), prioritaire=True) }}
+        </div>
+      </div>
+    </section>
+
+    {% for g in L.livres|map(attribute="genre")|unique %}
+    {% set numero_genre = loop.index %}
+    <section class="section{% if loop.index is odd %} section--sable{% endif %}" id="genre-{{ numero_genre }}" aria-labelledby="titre-genre-{{ numero_genre }}">
+      <div class="conteneur">
+        <h2 id="titre-genre-{{ numero_genre }}">{{ g }}</h2>
+        <div class="livres-liste">
+          {% for l in L.livres if l.genre == g %}
+          <article class="livre" id="{{ l.adresse }}">
+            <div class="livre__couverture">
+              {{ photo(l.couverture, "Couverture de " ~ l.titre, "(max-width: 640px) 180px, 220px", (320, 640)) }}
+            </div>
+            <div class="livre__texte">
+              <h3>{% if l.page_detaillee %}<a href="/livres/{{ l.adresse }}/">{{ l.titre }}</a>{% else %}{{ l.titre }}{% endif %}</h3>
+              <p class="livre__meta">{% if l.a_paraitre %}<strong>{{ l.mention }}</strong>{% else %}{{ l.mention }}{% endif %} - {{ l.editeur }}{% if l.details %}<br>{{ l.details }}{% endif %}</p>
+              {{ (l.resume if not l.page_detaillee else l.resume_court)|md }}
+              {% if not l.page_detaillee and l.texte_complementaire %}{{ l.texte_complementaire|md }}{% endif %}
+              {% for c in l.citations[:1] %}
+              <figure class="livre__citation"><blockquote>{{ ("« " ~ c.texte ~ " »")|md }}</blockquote><figcaption>{{ c.source|md_ligne }}</figcaption></figure>
+              {% endfor %}
+              {% if not l.page_detaillee %}
+                {% for a in l.avis %}
+                <figure class="livre__avis"><blockquote>{{ ("« " ~ a.texte ~ " »")|md }}</blockquote><figcaption>{% if a.lien %}<a href="{{ a.lien }}" rel="noopener">{{ a.auteur }}</a>{% else %}{{ a.auteur }}{% endif %}</figcaption></figure>
+                {% endfor %}
+              {% endif %}
+              {% if l.extrait %}
+              <details class="poeme">
+                <summary>Lire {% if l.extrait_2 %}deux poèmes{% else %}un extrait{% endif %}</summary>
+                <h4>{{ l.extrait_titre }}</h4>{{ l.extrait|poeme }}
+                {% if l.extrait_2 %}<h4>{{ l.extrait_2_titre }}</h4>{{ l.extrait_2|poeme }}{% endif %}
+              </details>
+              {% endif %}
+              <p class="livre__liens">
+                {% if l.page_detaillee %}<a class="bouton bouton--secondaire" href="/livres/{{ l.adresse }}/">Découvrir le livre</a>{% endif %}
+                {% for lien in l.liens %}<a href="{{ lien.url }}" rel="noopener">{{ lien.libelle }}</a>{% endfor %}
+                {% if not l.liens and not l.page_detaillee %}<span class="livre__epuise">Épuisé, disponible d'occasion</span>{% endif %}
+              </p>
+            </div>
+          </article>
+          {% endfor %}
+        </div>
+        {% if g == "Poésie" and L.lien_poemes %}
+        <p class="lien-suite">D'autres poèmes de voyage, non publiés, sont à lire sur <a href="{{ L.lien_poemes }}" rel="noopener">l'ancien carnet en ligne d'Arthur</a>.</p>
+        {% endif %}
+      </div>
+    </section>
+    {% endfor %}
+
+    <section class="section" aria-labelledby="titre-librairie">
+      <div class="conteneur">
+        <h2 id="titre-librairie">En librairie</h2>
+        <p>Les livres d'Arthur sont disponibles en librairie, sur commande, et chez l'éditeur.</p>
+        <div class="duo-photos">
+          {% for p in L.photos_librairie %}{{ photo(p.photo, p.description, "(max-width: 700px) 100vw, 540px", (600, 1100)) }}{% endfor %}
+        </div>
+      </div>
+    </section>
+
+    {{ appel("Faire venir l'auteur", "Rencontre en librairie, soirée de club, conférence en entreprise : Arthur aime partager ses livres avec ses lecteurs.", "Contacter Arthur", site.lien_formulaire) }}
+{% endblock %}

@@ -54,6 +54,17 @@ def md_ligne(texte) -> Markup:
     return Markup(html)
 
 
+def poeme(texte) -> Markup:
+    """Poème : garde les retours à la ligne, une ligne vide sépare les strophes."""
+    if not texte:
+        return Markup("")
+    strophes = re.split(r"\n\s*\n", str(texte).strip())
+    html = "".join(
+        "<p>" + "<br>".join(str(Markup.escape(l.strip())) for l in s.splitlines()) + "</p>"
+        for s in strophes)
+    return Markup(typo(html))
+
+
 # ---------------------------------------------------------------- photos
 
 _cache_images = {}
@@ -109,6 +120,7 @@ PAGES = [
     # (modèle, adresse de sortie, page active dans le menu)
     ("accueil.html", "index.html", ""),
     ("conferences.html", "conferences/index.html", "conferences"),
+    ("livres.html", "livres/index.html", "livres"),
 ]
 
 
@@ -128,6 +140,7 @@ def main():
     )
     env.filters["md"] = md
     env.filters["md_ligne"] = md_ligne
+    env.filters["poeme"] = poeme
     env.filters["typo"] = lambda t: Markup(typo(str(Markup.escape(t)))) if t else ""
     env.globals["img"] = img
     env.globals["url_site"] = URL_SITE
@@ -138,11 +151,16 @@ def main():
         "accueil": charger("accueil"),
         "conferences": charger("conferences"),
         "temoignages": charger("temoignages").get("temoignages", []),
+        "livres": charger("livres"),
     }
+    pages = list(PAGES)
+    for livre in donnees["livres"].get("livres", []):
+        if livre.get("page_detaillee"):
+            pages.append(("livre.html", f"livres/{livre['adresse']}/index.html", "livres", livre))
 
     adresses = []
-    for modele, sortie, actif in PAGES:
-        html = env.get_template(modele).render(actif=actif, **donnees)
+    for modele, sortie, actif, *extra in pages:
+        html = env.get_template(modele).render(actif=actif, livre=(extra[0] if extra else None), **donnees)
         cible = SORTIE / sortie
         cible.parent.mkdir(parents=True, exist_ok=True)
         cible.write_text(html, encoding="utf-8")
