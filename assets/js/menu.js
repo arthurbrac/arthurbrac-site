@@ -9,3 +9,16 @@
     bouton.textContent = ouvert ? 'Fermer' : 'Menu';
   });
 })();
+
+// Bouton « Copier le texte »
+document.querySelectorAll('[data-copier]').forEach(function (bouton) {
+  bouton.addEventListener('click', function () {
+    var cible = document.getElementById(bouton.getAttribute('data-copier'));
+    if (!cible || !navigator.clipboard) return;
+    navigator.clipboard.writeText(cible.innerText.trim()).then(function () {
+      var libelle = bouton.textContent;
+      bouton.textContent = 'Texte copié';
+      setTimeout(function () { bouton.textContent = libelle; }, 2000);
+    });
+  });
+});

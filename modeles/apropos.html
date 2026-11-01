@@ -1,0 +1,78 @@
+{% extends "base.html" %}
+{% from "macros.html" import photo, appel %}
+{% set A = apropos %}
+{% set titre_google = A.titre_google %}
+{% set description_google = A.description_google %}
+{% set adresse = "/a-propos/" %}
+
+{% block donnees_structurees %}
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ProfilePage",
+    "mainEntity": { "@type": "Person", "@id": "{{ url_site }}/#arthur", "name": "{{ site.nom }}", "url": "{{ url_site }}/" },
+    "breadcrumb": {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Accueil", "item": "{{ url_site }}/" },
+        { "@type": "ListItem", "position": 2, "name": "À propos", "item": "{{ url_site }}/a-propos/" }
+      ]
+    }
+  }
+  </script>
+{% endblock %}
+
+{% block contenu %}
+    <section class="heros heros--page">
+      <div class="conteneur heros__grille">
+        <div>
+          <nav class="ariane ariane--haut" aria-label="Fil d'Ariane"><ol><li><a href="/">Accueil</a></li><li>À propos</li></ol></nav>
+          <h1 class="titre-page">{{ A.titre }}</h1>
+          <p class="chapeau">{{ A.chapeau|typo }}</p>
+        </div>
+        <div class="heros__portrait heros__portrait--large">
+          {{ photo(A.photo, A.photo_description, "(max-width: 880px) 100vw, 540px", (640, 1200), prioritaire=True) }}
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--sable" aria-labelledby="titre-parcours">
+      <div class="conteneur bio">
+        <h2 id="titre-parcours" class="visuellement-cache">Le parcours</h2>
+        <div class="bio__chapitres">
+          {% for ch in A.chapitres %}
+          <article class="bio__chapitre">
+            <h3>{{ ch.titre|typo }}</h3>
+            {{ ch.texte|md }}
+          </article>
+          {% endfor %}
+        </div>
+        <aside class="bio__reperes" aria-labelledby="titre-reperes">
+          <h3 id="titre-reperes">{{ A.reperes_titre }}</h3>
+          <ol class="frise">
+            {% for r in A.reperes %}<li><strong>{{ r.annee }}</strong><span>{{ r.texte|md_ligne }}</span></li>{% endfor %}
+          </ol>
+        </aside>
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="titre-bio-courte">
+      <div class="conteneur section__intro">
+        <h2 id="titre-bio-courte">{{ A.bio_courte_titre }}</h2>
+        <p>{{ A.bio_courte_intro|typo }}</p>
+        <div class="bio-courte" id="bio-courte">{{ A.bio_courte|md }}</div>
+        <button class="bouton bouton--secondaire" type="button" data-copier="bio-courte">Copier le texte</button>
+      </div>
+    </section>
+
+    <section class="section section--sable" aria-labelledby="titre-credits">
+      <div class="conteneur section__intro">
+        <h2 id="titre-credits">{{ A.credits_titre }}</h2>
+        <ul class="credits">
+          {% for c in A.credits %}<li><em>{{ c.livre }}</em>&nbsp;: {{ c.auteur }}</li>{% endfor %}
+        </ul>
+      </div>
+    </section>
+
+    {{ appel("Inviter Arthur", "Pour une conférence, une table ronde ou une rencontre autour de ses livres.", "Inviter Arthur pour une conférence", site.lien_formulaire) }}
+{% endblock %}

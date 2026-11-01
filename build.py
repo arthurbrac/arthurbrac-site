@@ -121,6 +121,7 @@ PAGES = [
     ("accueil.html", "index.html", ""),
     ("conferences.html", "conferences/index.html", "conferences"),
     ("livres.html", "livres/index.html", "livres"),
+    ("apropos.html", "a-propos/index.html", "a-propos"),
 ]
 
 
@@ -152,6 +153,7 @@ def main():
         "conferences": charger("conferences"),
         "temoignages": charger("temoignages").get("temoignages", []),
         "livres": charger("livres"),
+        "apropos": charger("apropos"),
     }
     pages = list(PAGES)
     for livre in donnees["livres"].get("livres", []):

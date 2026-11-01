@@ -221,6 +221,45 @@ content:
               - { name: url, label: "Adresse", type: string }
           - { name: page_detaillee, label: "Page dédiée pour ce livre ?", type: boolean }
 
+  - name: apropos
+    label: À propos
+    type: file
+    path: contenu/apropos.yml
+    format: yaml
+    fields:
+      - { name: titre_google, label: "Titre affiché dans Google", type: string }
+      - { name: description_google, label: "Description affichée dans Google", type: text }
+      - { name: titre, label: "Titre de la page", type: string }
+      - { name: chapeau, label: "Phrase d'introduction", type: text }
+      - { name: photo, label: "Photo", type: image }
+      - { name: photo_description, label: "Description de la photo", type: string }
+      - name: chapitres
+        label: Chapitres de la biographie
+        type: object
+        list: true
+        fields:
+          - { name: titre, label: "Titre", type: string }
+          - { name: texte, label: "Texte", component: aide_mise_en_forme }
+      - { name: reperes_titre, label: "Titre des repères", type: string }
+      - name: reperes
+        label: Repères chronologiques
+        type: object
+        list: true
+        fields:
+          - { name: annee, label: "Année", type: string }
+          - { name: texte, label: "Événement", type: string }
+      - { name: bio_courte_titre, label: "Titre de la bio courte", type: string }
+      - { name: bio_courte_intro, label: "Introduction de la bio courte", type: string }
+      - { name: bio_courte, label: "Bio courte", component: aide_mise_en_forme }
+      - { name: credits_titre, label: "Titre des crédits", type: string }
+      - name: credits
+        label: Crédits des couvertures
+        type: object
+        list: true
+        fields:
+          - { name: livre, label: "Livre", type: string }
+          - { name: auteur, label: "Crédit", type: string }
+
   - name: temoignages
     label: Témoignages
     type: file

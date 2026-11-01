@@ -402,3 +402,23 @@ p { margin: 0 0 1em; }
 .citation--seconde p { font-size: clamp(1.2rem, 1rem + 1vw, 1.6rem); }
 @media (max-width: 760px) { .fiche-livre__grille { grid-template-columns: 1fr; } .fiche-livre__couverture { max-width: 260px; } }
 .heros h1.titre-page { font-family: var(--serif); font-size: clamp(2.2rem, 1.4rem + 3vw, 3.4rem); color: var(--encre); line-height: 1.1; margin: 0 0 18px; }
+
+/* ---------- Page À propos ---------- */
+.chapeau { font-family: var(--serif); font-size: clamp(1.25rem, 1rem + 1vw, 1.6rem); line-height: 1.4; color: var(--encre); max-width: 560px; }
+.heros__portrait--large img { aspect-ratio: 3 / 2; }
+@media (max-width: 880px) { .heros__portrait--large { max-width: none; order: 0; } }
+.bio { display: grid; grid-template-columns: 1.6fr 0.9fr; gap: clamp(28px, 5vw, 64px); align-items: start; }
+.bio__chapitre { margin-bottom: 34px; }
+.bio__chapitre h3 { font-size: 1.45rem; margin-bottom: 10px; }
+.bio__chapitre p { font-size: 1.08rem; }
+.bio__reperes { background: var(--blanc); border: 1px solid var(--trait); border-radius: var(--rayon); padding: 26px; position: sticky; top: 92px; }
+.bio__reperes h3 { margin-bottom: 16px; }
+.frise { list-style: none; margin: 0; padding: 0; border-left: 2px solid var(--trait); }
+.frise li { position: relative; padding: 0 0 16px 22px; }
+.frise li::before { content: ""; position: absolute; left: -7px; top: 6px; width: 12px; height: 12px; border-radius: 50%; background: var(--accent); }
+.frise strong { display: block; font-family: var(--serif); color: var(--accent-fonce); }
+.frise span { color: var(--encre-douce); font-size: 0.97rem; }
+@media (max-width: 880px) { .bio { grid-template-columns: 1fr; } .bio__reperes { position: static; } }
+.bio-courte { background: var(--blanc); border: 1px dashed var(--accent); border-radius: var(--rayon); padding: 22px 24px; margin: 18px 0; }
+.bio-courte p:last-child { margin: 0; }
+.credits { padding-left: 1.2em; }
