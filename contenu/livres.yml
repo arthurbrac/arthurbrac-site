@@ -40,10 +40,7 @@ livres:
       Le roman se déroule à Lyon, de nos jours. Ses quatre personnages principaux, Hannah, Albert, Simone et Frédéric, sont inspirés de quatre penseurs des XIXe et XXe siècles : Hannah Arendt, Albert Camus, Simone Weil et Friedrich Nietzsche. Le roman s'inspire librement de ces figures, sans prétendre interpréter leur pensée ni éclairer leur œuvre. Il imagine plutôt ce que pourraient être leurs héritiers du XXIe siècle, réunis par le hasard pour réfléchir ensemble et agir sur le monde.
     citations: []
     avis: []
-    extrait_titre: ""
-    extrait: ""
-    extrait_2_titre: ""
-    extrait_2: ""
+    poemes: []
     liens:
       - libelle: Chez l'éditeur
         url: https://les-passionnes-de-bouquins.com/catalogue/arthur%20brac/#/
@@ -82,10 +79,7 @@ livres:
       - texte: On m'a offert ce livre que j'ai dévoré ! Passionnant récit sur le quotidien d'un chef d'entreprise artisanale… avec ses réflexions philosophiques qui l'aident à prendre de la hauteur. Un ouvrage de référence, pour les entrepreneurs, comme pour les employés et les clients ! Je l'ai racheté pour l'offrir à d'autres !
         auteur: Fred P., lecteur sur Decitre
         lien: https://www.decitre.fr/livres/l-entrepreneur-philosophe-9782363511171.html
-    extrait_titre: ""
-    extrait: ""
-    extrait_2_titre: ""
-    extrait_2: ""
+    poemes: []
     liens:
       - libelle: Chez l'éditeur
         url: https://les-passionnes-de-bouquins.com/catalogue/arthur%20brac/#/
@@ -121,10 +115,7 @@ livres:
       - texte: J'ai dévoré ce livre en un dimanche, avec plein de remises en question et d'envies de changement une fois la dernière page tournée ! Une histoire très bien écrite, des pages de valeurs.
         auteur: Antoine C., lecteur sur Decitre
         lien: https://www.decitre.fr/livres/la-pierre-interieure-9782363510853.html
-    extrait_titre: ""
-    extrait: ""
-    extrait_2_titre: ""
-    extrait_2: ""
+    poemes: []
     liens:
       - libelle: Chez l'éditeur
         url: https://les-passionnes-de-bouquins.com/catalogue/arthur%20brac/#/
@@ -150,13 +141,10 @@ livres:
     texte_complementaire: ""
     citations: []
     avis: []
-    extrait_titre: ""
-    extrait: ""
-    extrait_2_titre: ""
-    extrait_2: ""
+    poemes: []
     liens:
-      - libelle: Chez l'éditeur
-        url: https://les-passionnes-de-bouquins.com/catalogue/arthur%20brac/#/
+      - libelle: Eyrolles
+        url: https://www.eyrolles.com/Litterature/Livre/la-pieuvre-de-lhassa-9782812148651/
     page_detaillee: false
 
   - titre: La Terre est un poème
@@ -179,10 +167,7 @@ livres:
       - texte: Quelques grammes de finesse dans un monde de brutes ? Lorsque voyage rime avec poésie…
         source: "Lonely Planet, *Comète*, juin 2006"
     avis: []
-    extrait_titre: ""
-    extrait: ""
-    extrait_2_titre: ""
-    extrait_2: ""
+    poemes: []
     liens: []
     page_detaillee: false
 
@@ -201,37 +186,54 @@ livres:
     texte_complementaire: ""
     citations: []
     avis: []
-    extrait_titre: Mer d'Aral
-    extrait: |-
-      J'ai marché sur les fonds marins
-      sous un soleil lourd de chagrin
-      dans des miettes de coquillages
-      aux parfums des anciens sillages.
+    poemes:
+      - titre: Mer d'Aral
+        texte: |-
+          J'ai marché sur les fonds marins
+          sous un soleil lourd de chagrin
+          dans des miettes de coquillages
+          aux parfums des anciens sillages.
 
-      J'ai vu sur le port des bateaux mourir de sable
-      en pleurant à jamais une mère ineffable
-      j'ai vu le sel et la soif de la mer d'Aral,
-      dans la poussière aride d'une grande barrière de rocaille.
+          J'ai vu sur le port des bateaux mourir de sable
+          en pleurant à jamais une mère ineffable
+          j'ai vu le sel et la soif de la mer d'Aral,
+          dans la poussière aride d'une grande barrière de rocaille.
 
-      J'ai vu un vieux fleuve étranglé
-      derrière l'estuaire délavé
-      j'ai su au désert amarré
-      qu'il n'y aurait plus qu'une marée.
-    extrait_2_titre: La pêche
-    extrait_2: |-
-      Le soleil s'est jeté dans la rivière
-      là où les eaux s'allongent.
+          J'ai vu un vieux fleuve étranglé
+          derrière l'estuaire délavé
+          j'ai su au désert amarré
+          qu'il n'y aurait plus qu'une marée.
+      - titre: La pêche
+        texte: |-
+          Le soleil s'est jeté dans la rivière
+          là où les eaux s'allongent.
 
-      Un enfant s'assied sur des nuages d'ombres
-      et transperce le temps d'un fil de soie
-      jeté dans les flots sereins et opaques.
+          Un enfant s'assied sur des nuages d'ombres
+          et transperce le temps d'un fil de soie
+          jeté dans les flots sereins et opaques.
 
-      Au-dessus des gouttelettes mélodieuses,
-      les astres ne bougent plus.
+          Au-dessus des gouttelettes mélodieuses,
+          les astres ne bougent plus.
 
-      Des ondes fabriquent les secondes d'eau
-      d'une horloge suspendue
-      aux profondeurs des courants intérieurs.
+          Des ondes fabriquent les secondes d'eau
+          d'une horloge suspendue
+          aux profondeurs des courants intérieurs.
+      - titre: L'heure d'été
+        texte: |-
+          Voyage arrête-toi
+          et laisse goûter ce thé sur mes lèvres.
+          Ne me quitte pas
+          et remplis mes yeux de tes histoires.
+
+          Ne m'abandonne pas,
+          reste encore un peu,
+          le temps que j'oublie
+          que j'ai été cet homme.
+
+          Le temps que j'oublie
+          les murs de ma vie,
+          l'usure de mes couloirs
+          et l'heure de mon sommeil.
     liens:
       - libelle: Fnac
         url: https://www.fnac.com/a4759657/Arthur-Brac-de-la-Perriere-L-Asie-centrale-poetique
@@ -256,33 +258,39 @@ livres:
     texte_complementaire: ""
     citations: []
     avis: []
-    extrait_titre: Instants
-    extrait: |-
-      Que deviendront demain ces improbables instants
-      Quand de ma mémoire ils iront s'évaporant ?
-      Car sans fin, les instants de ma mémoire s'échangent
-      Pour regagner très doucement la part des anges.
+    poemes:
+      - titre: Instants
+        texte: |-
+          Que deviendront demain ces improbables instants
+          Quand de ma mémoire ils iront s'évaporant ?
+          Car sans fin, les instants de ma mémoire s'échangent
+          Pour regagner très doucement la part des anges.
 
-      Je traverse ces instants dont me dépouille le temps,
-      Qu'ils me traversent, qu'ils me traversent encore longtemps.
-      Que les instants me piquent et s'en aillent, que je change !
-      Un jour je m'y noierai en gagnant ma part d'ange.
-    extrait_2_titre: L'heure d'été
-    extrait_2: |-
-      Voyage arrête-toi
-      et laisse goûter ce thé sur mes lèvres.
-      Ne me quitte pas
-      et remplis mes yeux de tes histoires.
+          Je traverse ces instants dont me dépouille le temps,
+          Qu'ils me traversent, qu'ils me traversent encore longtemps.
+          Que les instants me piquent et s'en aillent, que je change !
+          Un jour je m'y noierai en gagnant ma part d'ange.
+      - titre: Les offrandes de la nuit
+        texte: |-
+          Dansez tristesses,
+          Souriez princesses,
+          Votre beauté est précieuse,
+          Vous qui êtes si pieuses
+          De ces rudes caresses
+          Aux séductions de paresse.
 
-      Ne m'abandonne pas,
-      reste encore un peu,
-      le temps que j'oublie
-      que j'ai été cet homme.
+          Et qu'est-ce qu'une pièce d'or
+          Pour une jeunesse indolore,
+          Une fesse rafraîchie,
+          Un sexe d'oubli,
+          Un baiser d'indifférence
+          Sur un lit sans romance.
 
-      Le temps que j'oublie
-      les murs de ma vie,
-      l'usure de mes couloirs
-      et l'heure de mon sommeil.
+          Un lendemain de filles de destin,
+          La décadence
+          Des femmes d'élégance,
+          Et pour Bouddha quelques fruits,
+          Les offrandes de la nuit.
     liens:
       - libelle: Avis des lecteurs sur Fnac
         url: https://www.fnac.com/a1509171/Arthur-Brac-de-la-Perriere-Les-rimes-du-monde

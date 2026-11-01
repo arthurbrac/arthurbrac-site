@@ -74,11 +74,10 @@
                 <figure class="livre__avis"><blockquote>{{ ("« " ~ a.texte ~ " »")|md }}</blockquote><figcaption>{% if a.lien %}<a href="{{ a.lien }}" rel="noopener">{{ a.auteur }}</a>{% else %}{{ a.auteur }}{% endif %}</figcaption></figure>
                 {% endfor %}
               {% endif %}
-              {% if l.extrait %}
+              {% if l.poemes %}
               <details class="poeme">
-                <summary>Lire {% if l.extrait_2 %}deux poèmes{% else %}un extrait{% endif %}</summary>
-                <h4>{{ l.extrait_titre }}</h4>{{ l.extrait|poeme }}
-                {% if l.extrait_2 %}<h4>{{ l.extrait_2_titre }}</h4>{{ l.extrait_2|poeme }}{% endif %}
+                <summary>Lire {% if l.poemes|length == 1 %}un poème{% else %}{{ l.poemes|length }} poèmes{% endif %}</summary>
+                {% for po in l.poemes %}<h4>{{ po.titre }}</h4>{{ po.texte|poeme }}{% endfor %}
               </details>
               {% endif %}
               <p class="livre__liens">

@@ -205,10 +205,13 @@ content:
               - { name: texte, label: "Avis (sans guillemets)", type: text }
               - { name: auteur, label: "Auteur et site", type: string }
               - { name: lien, label: "Lien vers l'avis", type: string }
-          - { name: extrait_titre, label: "Titre du poème ou de l'extrait", type: string }
-          - { name: extrait, label: "Poème ou extrait (retours à la ligne conservés)", type: text }
-          - { name: extrait_2_titre, label: "Titre du 2e poème", type: string }
-          - { name: extrait_2, label: "2e poème", type: text }
+          - name: poemes
+            label: Poèmes ou extraits
+            type: object
+            list: true
+            fields:
+              - { name: titre, label: "Titre", type: string }
+              - { name: texte, label: "Texte (retours à la ligne conservés, ligne vide entre les strophes)", type: text }
           - name: liens
             label: Liens d'achat
             type: object
