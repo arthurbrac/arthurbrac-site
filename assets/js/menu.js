@@ -22,3 +22,11 @@ document.querySelectorAll('[data-copier]').forEach(function (bouton) {
     });
   });
 });
+
+// Adresse e-mail reconstituée au clic (pour la cacher aux robots)
+document.querySelectorAll('[data-courriel]').forEach(function (lien) {
+  lien.addEventListener('click', function (e) {
+    e.preventDefault();
+    window.location.href = 'mailto:' + lien.getAttribute('data-courriel').replace(' [at] ', '@');
+  });
+});

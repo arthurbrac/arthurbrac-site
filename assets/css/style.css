@@ -440,3 +440,22 @@ p { margin: 0 0 1em; }
 .photos-hd img { width: 100%; aspect-ratio: 4 / 3; object-fit: cover; object-position: center 15%; border-radius: 10px; }
 .photos-hd figcaption { font-size: 0.92rem; color: var(--encre-douce); margin-top: 8px; }
 @media (max-width: 760px) { .photos-hd { grid-template-columns: 1fr; } }
+.contact-presse { display: grid; grid-template-columns: 1fr 1fr; gap: clamp(24px, 5vw, 56px); align-items: center; }
+.contact-presse figure { margin: 0; }
+.contact-presse img { border-radius: var(--rayon); width: 100%; aspect-ratio: 3 / 2; object-fit: cover; }
+.contact-presse figcaption { font-size: 0.92rem; margin-top: 8px; }
+@media (max-width: 760px) { .contact-presse { grid-template-columns: 1fr; } }
+
+/* ---------- Contact et mentions légales ---------- */
+.contact { display: grid; grid-template-columns: 0.9fr 1.1fr; gap: clamp(28px, 5vw, 64px); align-items: start; }
+.contact__sous-titre { font-family: var(--sans); font-size: 1.05rem; font-weight: 600; margin-top: 26px; }
+.contact ul { padding-left: 1.2em; }
+.contact__direct { margin-top: 26px; color: var(--encre-douce); }
+.contact__reseaux { display: flex; gap: 12px; flex-wrap: wrap; }
+.contact__formulaire { background: var(--blanc); border: 1px solid var(--trait); border-radius: var(--rayon); padding: clamp(16px, 3vw, 32px); }
+.contact__formulaire iframe { border: 0; display: block; }
+.contact__secours h2 { font-size: 1.5rem; }
+@media (max-width: 880px) { .contact { grid-template-columns: 1fr; } }
+.texte-legal { max-width: 780px; }
+.texte-legal h2 { font-size: 1.4rem; margin-top: 38px; }
+.telephone { display: inline-block; vertical-align: middle; height: 1.1em; width: auto; }

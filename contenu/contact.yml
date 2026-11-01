@@ -1,0 +1,19 @@
+# Page Contact (modifiable dans Pages CMS > Contact)
+titre_google: Contact - inviter Arthur Brac de la Perrière pour une conférence
+description_google: >-
+  Inviter Arthur Brac de la Perrière pour une conférence, une table ronde ou une
+  rencontre : décrivez votre événement, il vous répond rapidement.
+titre: Inviter Arthur
+introduction: >-
+  Séminaire, assemblée générale, soirée de réseau, convention de salariés,
+  rencontre en librairie : décrivez votre projet en quelques lignes, Arthur vous
+  répond rapidement.
+conseils_titre: Pour une réponse rapide, précisez
+conseils:
+  - La date ou la période envisagée
+  - Le lieu de l'événement
+  - Le public et le nombre de participants
+  - Le format et la durée souhaités
+# Adresse du formulaire Tally, à coller une fois le formulaire créé (ex. : https://tally.so/r/abc123)
+formulaire_tally: ""
+direct_texte: Vous préférez un contact direct ? Écrivez à Arthur sur LinkedIn.

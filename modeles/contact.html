@@ -1,0 +1,36 @@
+{% extends "base.html" %}
+{% set C = contact %}
+{% set titre_google = C.titre_google %}
+{% set description_google = C.description_google %}
+{% set adresse = "/contact/" %}
+
+{% block contenu %}
+    <section class="section fiche-livre">
+      <div class="conteneur contact">
+        <div class="contact__texte">
+          <nav class="ariane ariane--haut" aria-label="Fil d'Ariane"><ol><li><a href="/">Accueil</a></li><li>Contact</li></ol></nav>
+          <h1 class="titre-page">{{ C.titre }}</h1>
+          <p class="chapeau">{{ C.introduction|typo }}</p>
+          <h2 class="contact__sous-titre">{{ C.conseils_titre }}</h2>
+          <ul>{% for c in C.conseils %}<li>{{ c|typo }}</li>{% endfor %}</ul>
+          <p class="contact__direct">{{ C.direct_texte|typo }}</p>
+          <p class="contact__reseaux">
+            <a class="bouton bouton--secondaire" href="{{ site.linkedin }}" rel="noopener">LinkedIn</a>
+            <a class="bouton bouton--secondaire" href="{{ site.instagram }}" rel="noopener">Instagram</a>
+          </p>
+        </div>
+        <div class="contact__formulaire">
+          {% if C.formulaire_tally %}
+          {% set code = C.formulaire_tally.rstrip("/").split("/")[-1] %}
+          <iframe src="https://tally.so/embed/{{ code }}?alignLeft=1&amp;hideTitle=1&amp;transparentBackground=1" title="Formulaire de demande de conférence" loading="lazy" width="100%" height="1100"></iframe>
+          {% else %}
+          <div class="contact__secours">
+            <h2>Écrire à Arthur</h2>
+            <p>Le formulaire de demande arrive bientôt. En attendant, écrivez directement :</p>
+            <p><a class="bouton" href="#" data-courriel="{{ site.email|replace('@', ' [at] ') }}">Envoyer un e-mail</a></p>
+          </div>
+          {% endif %}
+        </div>
+      </div>
+    </section>
+{% endblock %}

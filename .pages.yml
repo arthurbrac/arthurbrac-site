@@ -307,6 +307,37 @@ content:
           - { name: photo, label: "Photo", type: image }
           - { name: description, label: "Description", type: string }
 
+  - name: contact
+    label: Contact
+    type: file
+    path: contenu/contact.yml
+    format: yaml
+    fields:
+      - { name: titre_google, label: "Titre affiché dans Google", type: string }
+      - { name: description_google, label: "Description affichée dans Google", type: text }
+      - { name: titre, label: "Titre de la page", type: string }
+      - { name: introduction, label: "Introduction", type: text }
+      - { name: conseils_titre, label: "Titre des conseils", type: string }
+      - { name: conseils, label: "Conseils", type: string, list: true }
+      - { name: formulaire_tally, label: "Adresse du formulaire Tally", type: string, description: "ex. : https://tally.so/r/abc123" }
+      - { name: direct_texte, label: "Phrase pour le contact direct", type: string }
+
+  - name: mentions
+    label: Mentions légales
+    type: file
+    path: contenu/mentions.yml
+    format: yaml
+    fields:
+      - { name: societe, label: "Société", type: string }
+      - { name: forme, label: "Forme juridique", type: string }
+      - { name: capital, label: "Capital", type: string }
+      - { name: rcs_ville, label: "Ville du RCS", type: string }
+      - { name: siren, label: "SIREN", type: string }
+      - { name: siret, label: "SIRET", type: string }
+      - { name: adresse, label: "Adresse du siège", type: string }
+      - { name: directeur, label: "Directeur de la publication", type: string }
+      - { name: hebergeur, label: "Hébergeur", type: text }
+
   - name: temoignages
     label: Témoignages
     type: file

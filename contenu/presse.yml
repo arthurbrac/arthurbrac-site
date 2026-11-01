@@ -17,11 +17,11 @@ articles:
   - media: Les Échos
     titre: "« La philosophie au secours de l'entrepreneur », critique de L'entrepreneur philosophe"
     date: 2021-2022
-    lien: ""
+    lien: https://www.lesechos.fr/idees-debats/livres/la-philosophie-au-secours-de-lentrepreneur-1411810
   - media: Le Progrès
     titre: "« L'entrepreneur philosophe » d'Arthur Brac de la Perrière"
     date: Février 2022
-    lien: ""
+    lien: https://www.leprogres.fr/culture-loisirs/2022/02/12/l-entrepreneur-philosophe-d-arthur-brac-de-la-perriere
   - media: Maddyness
     titre: Interview sur la philosophie dans la vie d'un dirigeant de PME
     date: 2021-2022
@@ -62,12 +62,8 @@ ecouter:
     date: "2020"
     lien: https://youtu.be/d8CsFi4t5vg
 
-journalistes_titre: Pour les journalistes
-journalistes_texte: "Pour une interview, une chronique ou une invitation : écrivez via le formulaire de contact. Une présentation courte est disponible sur la page [À propos](/a-propos/#bio-courte), et ces photos peuvent être utilisées librement pour un article."
+journalistes_titre: Contact presse
+journalistes_texte: "Pour une interview, une chronique ou une invitation, le plus simple est d'écrire via le formulaire de contact. Une présentation courte est disponible sur la page [À propos](/a-propos/#bio-courte)."
 photos_hd:
-  - photo: /medias/portraits/arthur-lunettes-nb.jpg
-    description: Portrait noir et blanc, format vertical
-  - photo: /medias/portraits/arthur-mur-beton-nb.jpg
-    description: Portrait noir et blanc, format horizontal
   - photo: /medias/portraits/arthur-jardin.jpg
-    description: Portrait couleur, format horizontal
+    description: Arthur Brac de la Perrière dans un jardin à Lyon, un livre à la main

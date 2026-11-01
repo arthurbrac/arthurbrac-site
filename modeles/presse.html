@@ -58,16 +58,16 @@
 
     <section class="section section--sable" aria-labelledby="titre-journalistes">
       <div class="conteneur">
-        <div class="section__intro">
-          <h2 id="titre-journalistes">{{ P.journalistes_titre }}</h2>
-          {{ P.journalistes_texte|md }}
-          <p><a class="bouton" href="{{ site.lien_formulaire }}">Contacter Arthur</a></p>
-        </div>
-        <div class="photos-hd">
-          {% for p in P.photos_hd %}
+        <div class="contact-presse">
+          <div>
+            <h2 id="titre-journalistes">{{ P.journalistes_titre }}</h2>
+            {{ P.journalistes_texte|md }}
+            <p><a class="bouton" href="{{ site.lien_formulaire }}">Contacter Arthur</a></p>
+          </div>
+          {% for p in P.photos_hd[:1] %}
           <figure>
-            {{ photo(p.photo, "Arthur Brac de la Perrière - " ~ p.description, "(max-width: 700px) 100vw, 360px", (500,)) }}
-            <figcaption>{{ p.description }}<br><a href="{{ p.photo }}" download>Télécharger en haute définition</a></figcaption>
+            {{ photo(p.photo, p.description, "(max-width: 760px) 100vw, 480px", (600, 1000)) }}
+            <figcaption><a href="{{ p.photo }}" download>Télécharger la photo en haute définition</a></figcaption>
           </figure>
           {% endfor %}
         </div>
