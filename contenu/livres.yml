@@ -5,10 +5,7 @@ description_google: >-
   Les livres d'Arthur Brac de la Perrière : Rhapsodie pour une humanité, L'entrepreneur
   philosophe, La pierre intérieure (prix ARAL 2020), romans et carnets de voyage en poèmes.
 titre: Les livres
-introduction: >-
-  Poète voyageur à ses débuts, puis romancier et essayiste, Arthur Brac de la
-  Perrière écrit depuis plus de vingt ans. Des carnets de voyage aux romans, une
-  même question traverse ses livres : comment habiter le monde moderne ?
+introduction: "Poète voyageur à mes débuts, puis romancier et essayiste, j'écris depuis plus de vingt ans. Des carnets de voyage aux romans, une même question traverse mes livres : comment habiter le monde moderne ?"
 photo: /medias/portraits/arthur-cafe.jpg
 photo_description: Arthur Brac de la Perrière écrivant dans un café, un livre ouvert et un stylo à la main
 photos_librairie:
@@ -59,17 +56,16 @@ livres:
     resume_court: Le quotidien d'un patron de PME, avec la philosophie comme boîte à outils pour penser et agir. Le livre à l'origine des conférences.
     resume: >-
       L'entreprise et la philosophie. Deux mondes a priori opposés. Et pourtant,
-      fort de son expérience de dirigeant, Arthur Brac de la Perrière propose des
-      passerelles entre ces deux univers. Dans son quotidien de patron de PME, il
-      utilise la philosophie et ses concepts comme une véritable boîte à outils pour
+      fort de mon expérience de dirigeant, je propose des passerelles entre ces
+      deux univers. Dans mon quotidien de patron de PME, j'utilise la philosophie et ses concepts comme une véritable boîte à outils pour
       faire de l'entrepreneuriat une matière permettant de penser et agir. Ce livre
       témoignage, fondé sur des exemples concrets, propose des ressources originales
       pour l'entreprise.
     texte_complementaire: >-
-      Ce livre est à l'origine des conférences d'Arthur : il y raconte les litiges,
+      Ce livre est à l'origine de mes conférences : j'y raconte les litiges,
       les conflits, les crises de croissance et les choix difficiles d'une PME du
       bâtiment, et ce que Spinoza, Leibniz, Sartre, les stoïciens ou les épicuriens
-      lui ont appris pour les traverser.
+      m'ont appris pour les traverser.
     citations:
       - texte: On referme ces pages avec une vision remarquablement concrète du métier d'entrepreneur… et une réelle dose de compassion. Un regard singulier et stimulant.
         source: "*Les Échos*, Gabriel Grésillon"

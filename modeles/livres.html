@@ -90,7 +90,7 @@
           {% endfor %}
         </div>
         {% if g == "Poésie" and L.lien_poemes %}
-        <p class="lien-suite">D'autres poèmes de voyage, non publiés, sont à lire sur <a href="{{ L.lien_poemes }}" rel="noopener">l'ancien carnet en ligne d'Arthur</a>.</p>
+        <p class="lien-suite">D'autres poèmes de voyage, non publiés, sont à lire sur <a href="{{ L.lien_poemes }}" rel="noopener">mon ancien carnet en ligne</a>.</p>
         {% endif %}
       </div>
     </section>
@@ -99,12 +99,12 @@
     <section class="section" aria-labelledby="titre-librairie">
       <div class="conteneur">
         <h2 id="titre-librairie">En librairie</h2>
-        <p>Les livres d'Arthur sont disponibles en librairie, sur commande, et chez l'éditeur.</p>
+        <p>Mes livres sont disponibles en librairie, sur commande, et chez l'éditeur.</p>
         <div class="duo-photos">
           {% for p in L.photos_librairie %}{{ photo(p.photo, p.description, "(max-width: 700px) 100vw, 540px", (600, 1100)) }}{% endfor %}
         </div>
       </div>
     </section>
 
-    {{ appel("Faire venir l'auteur", "Rencontre en librairie, soirée de club, conférence en entreprise : Arthur aime partager ses livres avec ses lecteurs.", "Contacter Arthur", site.lien_formulaire) }}
+    {{ appel("Rencontres et dédicaces", "Rencontre en librairie, soirée de club, conférence en entreprise : j'aime partager mes livres avec les lecteurs.", "Me contacter", site.lien_formulaire) }}
 {% endblock %}

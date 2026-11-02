@@ -33,6 +33,8 @@
           {% for cle, libelle in [("conferences", "Conférences"), ("livres", "Livres"), ("a-propos", "À propos"), ("presse", "Presse")] %}
           <li><a href="/{{ cle }}/"{% if actif == cle %} aria-current="page"{% endif %}>{{ libelle }}</a></li>
           {% endfor %}
+          <li class="nav__icone"><a href="{{ site.linkedin }}" rel="noopener" aria-label="LinkedIn" title="LinkedIn"><svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor" aria-hidden="true"><path d="M4.98 3.5C4.98 4.88 3.87 6 2.5 6S0 4.88 0 3.5 1.12 1 2.5 1s2.48 1.12 2.48 2.5zM.5 8h4v16h-4V8zm7.5 0h3.8v2.2h.05c.53-1 1.83-2.2 3.77-2.2 4.03 0 4.78 2.65 4.78 6.1V24h-4v-7.1c0-1.7-.03-3.88-2.36-3.88-2.37 0-2.73 1.85-2.73 3.76V24h-4V8z"/></svg><span class="nav__libelle-mobile">LinkedIn</span></a></li>
+          <li class="nav__icone"><a href="{{ site.instagram }}" rel="noopener" aria-label="Instagram" title="Instagram"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1.2" fill="currentColor" stroke="none"/></svg><span class="nav__libelle-mobile">Instagram</span></a></li>
           <li><a class="bouton" href="{{ site.lien_formulaire }}">{{ site.bouton_invitation }}</a></li>
         </ul>
       </nav>

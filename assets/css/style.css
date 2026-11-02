@@ -459,3 +459,13 @@ p { margin: 0 0 1em; }
 .texte-legal { max-width: 780px; }
 .texte-legal h2 { font-size: 1.4rem; margin-top: 38px; }
 .telephone { display: inline-block; vertical-align: middle; height: 1.1em; width: auto; }
+
+/* Icônes LinkedIn et Instagram dans le menu */
+.nav .nav__icone a { display: inline-flex; align-items: center; gap: 8px; color: var(--encre); }
+.nav .nav__icone a:hover { color: var(--accent-fonce); }
+.nav__libelle-mobile { display: none; }
+@media (min-width: 881px) { .nav ul { gap: 22px; } .nav .nav__icone + .nav__icone { margin-left: -8px; } }
+@media (max-width: 880px) { .nav__libelle-mobile { display: inline; } }
+
+/* Légendes de la galerie : l'image ne déborde plus dessus */
+.galerie--simple img { height: auto; }

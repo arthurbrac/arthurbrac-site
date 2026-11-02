@@ -7,15 +7,13 @@ description_google: >-
 
 bandeau_photo: /medias/portraits/arthur-mur-beton-nb.jpg
 bandeau_titre: "Conférences : philosophie et entreprise"
-bandeau_texte: >-
-  Un chef d'entreprise qui pense avec les philosophes, pour vos séminaires,
-  assemblées générales et soirées de réseau. Région lyonnaise et toute la France.
+bandeau_texte: "Chef d'entreprise, je pense avec les philosophes. Des conférences pour vos séminaires, assemblées générales et soirées de réseau, dans la région lyonnaise et partout en France."
 
 approche_titre: Relier l'expérience et la pensée
 approche_texte: |-
-  « Beaucoup de philosophes parlent de l'entreprise, mais peu d'entrepreneurs parlent de philo. » Diplômé d'HEC devenu artisan, puis dirigeant d'une PME de 40 personnes, Arthur part de situations vécues : un litige, un conflit social, une crise de croissance, un choix difficile. Il convoque ensuite les grands penseurs, avec humour et sans jargon, pour aider chacun à prendre de la hauteur et à agir.
+  « Beaucoup de philosophes parlent de l'entreprise, mais peu d'entrepreneurs parlent de philo. » Diplômé d'HEC devenu artisan, puis dirigeant d'une PME de 40 personnes, je pars de situations vécues : un litige, un conflit social, une crise de croissance, un choix difficile. Je convoque ensuite les grands penseurs, avec humour et sans jargon, pour aider chacun à prendre de la hauteur et à agir.
 
-  Chaque intervention est adaptée au public et à l'événement : comité de direction, convention de salariés, club de dirigeants, école.
+  J'adapte chaque intervention au public et à l'événement : comité de direction, convention de salariés, club de dirigeants, école.
 
 liste:
   - titre: "L'entrepreneur philosophe : décider, tenir, rebondir avec les grands penseurs"
@@ -25,7 +23,7 @@ liste:
     description: >-
       Que faire face à un client de mauvaise foi, à un conflit social, à un
       collaborateur malveillant ou à une croissance qui s'emballe ? À partir de
-      cas réels vécus à la tête de son entreprise, Arthur montre comment la
+      cas réels vécus à la tête de mon entreprise, je montre comment la
       philosophie devient une véritable boîte à outils pour décider et garder le cap.
     points_titre: Le déroulé type
     points_numerotes: true
@@ -48,8 +46,8 @@ liste:
     pour_qui: Pour les conventions et réunions de salariés, les séminaires de managers, les DRH
     description: >-
       Pourquoi tant de salariés, et de dirigeants, ont-ils le sentiment que leur
-      travail manque de sens ? Arthur a quitté une carrière confortable pour cette
-      raison. Il raconte comment il a ensuite construit une entreprise devenue
+      travail manque de sens ? J'ai quitté une carrière confortable pour cette
+      raison. Je raconte comment j'ai ensuite construit une entreprise devenue
       société à mission, et ce que les philosophes nous apprennent sur le travail humain.
     points_titre: Les penseurs mobilisés
     points_numerotes: false
@@ -69,8 +67,8 @@ liste:
     pour_qui: Pour les investisseurs, les comités de direction, les réseaux RSE et d'entrepreneurs
     description: >-
       À quoi sert la croissance ? Comment concilier rentabilité, impact écologique
-      et responsabilité envers les équipes ? Arthur interroge ces choix stratégiques
-      à partir de son expérience d'entrepreneur engagé dans la rénovation écologique.
+      et responsabilité envers les équipes ? J'interroge ces choix stratégiques
+      à partir de mon expérience d'entrepreneur engagé dans la rénovation écologique.
     points_titre: Les penseurs mobilisés
     points_numerotes: false
     points:
@@ -124,7 +122,7 @@ galerie:
     description: Arthur Brac de la Perrière sur scène au CJD Mâcon, micro en main, à côté de ses livres
     cadrage: haut
 
-medias_titre: Voir et écouter Arthur
+medias_titre: "Me voir et m'écouter"
 medias:
   - type: Vidéo - Cultcheers
     titre: Capsule n°2, présentée par The Musettes
@@ -182,8 +180,8 @@ references:
       - nom: Lyon 3 Manufactory
         annee: "2022"
 
-agence_texte: Arthur est référencé par l'agence **Conférences Inspiration** sur les thèmes éthique, leadership et management, philosophie, RSE et environnement.
+agence_texte: "Je suis référencé par l'agence **Conférences Inspiration** sur les thèmes éthique, leadership et management, philosophie, RSE et environnement."
 
 appel_titre: Parlons de votre événement
-appel_texte: "Date, lieu, public, durée : décrivez votre projet en quelques lignes, Arthur vous répond rapidement."
-appel_bouton: Inviter Arthur pour une conférence
+appel_texte: "Date, lieu, public, durée : décrivez votre projet en quelques lignes, je vous réponds rapidement."
+appel_bouton: "Organiser une conférence"

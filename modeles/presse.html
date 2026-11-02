@@ -62,12 +62,11 @@
           <div>
             <h2 id="titre-journalistes">{{ P.journalistes_titre }}</h2>
             {{ P.journalistes_texte|md }}
-            <p><a class="bouton" href="{{ site.lien_formulaire }}">Contacter Arthur</a></p>
+            <p><a class="bouton" href="{{ site.lien_formulaire }}">Me contacter</a></p>
           </div>
           {% for p in P.photos_hd[:1] %}
           <figure>
             {{ photo(p.photo, p.description, "(max-width: 760px) 100vw, 480px", (600, 1000)) }}
-            <figcaption><a href="{{ p.photo }}" download>Télécharger la photo en haute définition</a></figcaption>
           </figure>
           {% endfor %}
         </div>

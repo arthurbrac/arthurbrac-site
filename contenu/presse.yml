@@ -4,7 +4,7 @@ description_google: >-
   Arthur Brac de la Perrière dans la presse et les médias : Les Échos, Le Progrès,
   podcasts et vidéos sur la philosophie et l'entreprise. Contact presse et photos.
 titre: Presse et médias
-introduction: Ce que la presse dit de ses livres, et où l'écouter parler de philosophie et d'entreprise.
+introduction: "Ce que la presse dit de mes livres, et où m'écouter parler de philosophie et d'entreprise."
 
 citations:
   - texte: On referme ces pages avec une vision remarquablement concrète du métier d'entrepreneur… et une réelle dose de compassion. Un regard singulier et stimulant.
@@ -63,7 +63,7 @@ ecouter:
     lien: https://youtu.be/d8CsFi4t5vg
 
 journalistes_titre: Contact presse
-journalistes_texte: "Pour une interview, une chronique ou une invitation, le plus simple est d'écrire via le formulaire de contact. Une présentation courte est disponible sur la page [À propos](/a-propos/#bio-courte)."
+journalistes_texte: "Pour une interview, une chronique ou une invitation, le plus simple est de m'écrire via le formulaire de contact. Une présentation courte est disponible sur la page [À propos](/a-propos/#bio-courte)."
 photos_hd:
   - photo: /medias/portraits/arthur-jardin.jpg
     description: Arthur Brac de la Perrière dans un jardin à Lyon, un livre à la main
