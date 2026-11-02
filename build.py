@@ -125,6 +125,7 @@ PAGES = [
     ("presse.html", "presse/index.html", "presse"),
     ("contact.html", "contact/index.html", "contact"),
     ("mentions.html", "mentions-legales/index.html", "mentions"),
+    ("404.html", "404.html", ""),
 ]
 
 
@@ -172,7 +173,8 @@ def main():
         cible = SORTIE / sortie
         cible.parent.mkdir(parents=True, exist_ok=True)
         cible.write_text(html, encoding="utf-8")
-        adresses.append("/" + sortie.replace("index.html", ""))
+        if sortie != "404.html":
+            adresses.append("/" + sortie.replace("index.html", ""))
         print(f"  page fabriquée : /{sortie}")
 
     # fichiers fixes : styles, polices, icônes, documents
@@ -186,7 +188,7 @@ def main():
             shutil.copy(source, cible)
     if (RACINE / "medias" / "documents").exists():
         shutil.copytree(RACINE / "medias" / "documents", SORTIE / "medias" / "documents", dirs_exist_ok=True)
-    for fixe in ("CNAME", "404.html"):
+    for fixe in ("CNAME",):
         if (RACINE / fixe).exists():
             shutil.copy(RACINE / fixe, SORTIE / fixe)
 

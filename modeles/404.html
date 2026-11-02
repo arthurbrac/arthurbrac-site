@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+{% set titre_google = "Page introuvable - " ~ site.nom %}
+{% set description_google = "Cette page n'existe pas ou a été déplacée." %}
+{% set adresse = "/404.html" %}
+{% block contenu %}
+    <section class="section">
+      <div class="conteneur section__intro">
+        <h1 class="titre-page">Page introuvable</h1>
+        <p class="chapeau">Cette page n'existe pas, ou elle a été déplacée.</p>
+        <p><a class="bouton" href="/">Revenir à l'accueil</a> <a class="bouton bouton--secondaire" href="/conferences/">Voir les conférences</a></p>
+      </div>
+    </section>
+{% endblock %}
