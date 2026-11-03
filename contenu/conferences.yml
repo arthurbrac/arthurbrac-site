@@ -122,6 +122,13 @@ galerie:
     description: Arthur Brac de la Perrière sur scène au CJD Mâcon, micro en main, à côté de ses livres
     cadrage: haut
 
+# Captation vidéo d'une conférence : coller le lien YouTube et choisir une image ;
+# le bloc s'affiche automatiquement dès que le lien est rempli.
+video_titre: Me voir en conférence
+video_texte: ""
+video_lien: ""
+video_image: ""
+
 medias_titre: "Me voir et m'écouter"
 medias:
   - type: Vidéo - Cultcheers
@@ -149,7 +156,7 @@ references:
         annee: "2026"
       - nom: Avenir Focus
         annee: "2025"
-      - nom: Groupe BPCE, avec Shift Consulting
+      - nom: Shift Consulting, pour le Groupe BPCE (250 personnes)
         annee: "2023"
       - nom: SOCAM
         annee: "2022"

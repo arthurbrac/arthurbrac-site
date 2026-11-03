@@ -113,6 +113,20 @@
       </div>
     </section>
 
+    {% if c.video_lien %}
+    <section class="section" aria-labelledby="titre-video">
+      <div class="conteneur video-phare">
+        <h2 id="titre-video">{{ c.video_titre }}</h2>
+        {% if c.video_texte %}{{ c.video_texte|md }}{% endif %}
+        <a class="video-phare__lien" href="{{ c.video_lien }}" rel="noopener">
+          {% if c.video_image %}{{ photo(c.video_image, "Captation vidéo d'une conférence", "(max-width: 1120px) 100vw, 1120px", (800, 1600)) }}{% endif %}
+          <span class="video-phare__lecture" aria-hidden="true">▶</span>
+          <span class="visuellement-cache">Regarder la vidéo</span>
+        </a>
+      </div>
+    </section>
+    {% endif %}
+
     <section class="section" aria-labelledby="titre-medias">
       <div class="conteneur">
         <h2 id="titre-medias">{{ c.medias_titre }}</h2>

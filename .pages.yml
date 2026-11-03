@@ -118,6 +118,10 @@ content:
             label: "Cadrage (photo verticale : choisir « haut »)"
             type: select
             options: { values: ["", "haut"] }
+      - { name: video_titre, label: "Captation vidéo : titre", type: string }
+      - { name: video_texte, label: "Captation vidéo : texte (facultatif)", type: text }
+      - { name: video_lien, label: "Captation vidéo : lien YouTube (le bloc apparaît dès qu'il est rempli)", type: string }
+      - { name: video_image, label: "Captation vidéo : image d'aperçu", type: image }
       - { name: medias_titre, label: "Titre vidéos et podcasts", type: string }
       - name: medias
         label: Vidéos et podcasts
