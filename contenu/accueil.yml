@@ -1,27 +1,30 @@
-# Textes de la page d'accueil (modifiables dans Pages CMS > Accueil)
 titre_google: Arthur Brac de la Perrière - Conférencier philosophie et entreprise, Lyon
-description_google: >-
-  Chef d'entreprise, écrivain et conférencier à Lyon, Arthur Brac de la Perrière
-  intervient auprès des dirigeants et des équipes : philosophie et entreprise,
-  sens au travail, entrepreneuriat.
-
+description_google: "Chef d'entreprise, écrivain et conférencier à Lyon, Arthur
+  Brac de la Perrière intervient auprès des dirigeants et des équipes :
+  philosophie et entreprise, sens au travail, entrepreneuriat."
 accroche: Un entrepreneur qui pense avec la philosophie
 sous_titre_1: Arthur Brac de la Perrière
 sous_titre_2: Chef d'entreprise, écrivain et conférencier à Lyon
-introduction: "Diplômé d'HEC, j'ai quitté le monde des multinationales pour devenir artisan plaquiste-peintre, puis j'ai développé pendant 13 ans ma société meTiista, entreprise lyonnaise de rénovation devenue société à mission avec 40 collaborateurs. Auteur de *L'entrepreneur philosophe*, j'interviens auprès des dirigeants, des réseaux d'entrepreneurs et des écoles sur ce que la philosophie apporte à l'action."
+introduction: Diplômé d'HEC, j'ai quitté le monde des multinationales pour
+  devenir artisan plaquiste-peintre, j'ai repris puis développé pendant 13 ans
+  la société meTiista, entreprise lyonnaise de rénovation devenue société à
+  mission avec 40 collaborateurs. Auteur de *L'entrepreneur philosophe*,
+  j'interviens auprès des dirigeants, des réseaux d'entrepreneurs et des écoles
+  sur ce que la philosophie apporte à l'action.
 portrait: /medias/portraits/arthur-lunettes-nb.jpg
-portrait_description: Portrait en noir et blanc d'Arthur Brac de la Perrière, la main sur ses lunettes
-
+portrait_description: Portrait en noir et blanc d'Arthur Brac de la Perrière, la
+  main sur ses lunettes
 chiffres:
   - nombre: 15 ans
-    texte: à la tête d'entreprises, de l'artisanat à la PME, de la société à mission à l'économie sociale et solidaire
+    texte: à la tête d'entreprises, de l'artisanat à la PME, de la société à mission
+      à l'économie sociale et solidaire
   - nombre: 30+
-    texte: "conférences depuis 2021 : dirigeants, salariés, réseaux, syndicats, étudiants, lycéens"
+    texte: "conférences depuis 2021 : dirigeants, salariés, réseaux, syndicats,
+      étudiants, lycéens"
   - nombre: 7 livres
     texte: roman, essai, poésie
     texte_2: prix littéraire ARAL 2020
-
-references_titre: "Ils m'ont invité"
+references_titre: Ils m'ont invité
 references_sous_titre: Clubs de dirigeants, entreprises, fédérations professionnelles et écoles
 references:
   - CJD
@@ -33,30 +36,35 @@ references:
   - Rotary
   - INSA Lyon
   - Entreprises
-
 conferences_titre: Des conférences qui relient l'expérience et la pensée
-conferences_texte: "« Beaucoup de philosophes parlent de l'entreprise, mais peu d'entrepreneurs parlent de philo. » Je pars de situations vécues à la tête d'une PME pour montrer ce que les grands penseurs apportent aux décisions de tous les jours."
-
+conferences_texte: « Beaucoup de philosophes parlent de l'entreprise, mais peu
+  d'entrepreneurs parlent de philo. » Je pars de situations vécues à la tête
+  d'une PME pour montrer ce que les grands penseurs apportent aux décisions de
+  tous les jours.
 citation_presse:
-  texte: On referme ces pages avec une vision remarquablement concrète du métier d'entrepreneur… et une réelle dose de compassion.
+  texte: On referme ces pages avec une vision remarquablement concrète du métier
+    d'entrepreneur… et une réelle dose de compassion.
   source: "*Les Échos*, Gabriel Grésillon, à propos de *L'entrepreneur philosophe*"
-
 livres_titre: Les livres
-livres_texte: "Poésie de voyage, romans, essai : une même question traverse mes livres, comment habiter le monde moderne."
+livres_texte: "Poésie de voyage, romans, essai : une même question traverse mes
+  livres, comment habiter le monde moderne."
 livres_en_avant:
   - titre: Rhapsodie pour une humanité
     etiquette: Sortie en décembre 2026
     couverture: /medias/couvertures/rhapsodie-pour-une-humanite.png
-    resume: "Un roman philosophique à Lyon : une professeure d'histoire, un élève poète, une doctorante et un musicien fondent un collectif pour rendre l'avenir désirable."
+    resume: "Un roman philosophique à Lyon : une professeure d'histoire, un élève
+      poète, une doctorante et un musicien fondent un collectif pour rendre
+      l'avenir désirable."
     lien: /livres/rhapsodie-pour-une-humanite/
     lien_texte: Découvrir le roman
   - titre: L'entrepreneur philosophe
     etiquette: Essai, 2021
     couverture: /medias/couvertures/l-entrepreneur-philosophe.jpg
-    resume: Le quotidien d'un patron de PME, avec la philosophie comme boîte à outils pour penser et agir. Le livre à l'origine de mes conférences.
+    resume: Le quotidien d'un patron de PME, avec la philosophie comme boîte à
+      outils pour penser et agir. Le livre à l'origine de mes conférences.
     lien: /livres/l-entrepreneur-philosophe/
     lien_texte: Découvrir l'essai
-
 appel_titre: Vous organisez un séminaire, une convention ou une soirée de réseau ?
-appel_texte: "Parlons de votre public et de vos enjeux : j'adapte chaque conférence à l'événement."
-appel_bouton: "Organiser une conférence"
+appel_texte: "Parlons de votre public et de vos enjeux : j'adapte chaque
+  conférence à l'événement."
+appel_bouton: Organiser une conférence
