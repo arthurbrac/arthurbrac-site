@@ -475,3 +475,4 @@ p { margin: 0 0 1em; }
 .video-phare__lien img { width: 100%; height: 100%; object-fit: cover; opacity: 0.85; transition: opacity 0.2s; }
 .video-phare__lien:hover img { opacity: 1; }
 .video-phare__lecture { position: absolute; inset: 0; margin: auto; width: 84px; height: 84px; border-radius: 50%; background: var(--accent); color: var(--blanc); display: grid; place-items: center; font-size: 2rem; padding-left: 6px; }
+.contact__rgpd { font-size: .8rem; color: var(--encre-douce); margin-top: 12px; line-height: 1.5; }
