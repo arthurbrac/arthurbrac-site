@@ -166,7 +166,7 @@
         </div>
         <div class="encart-agence">
           {{ c.agence_texte|md }}
-          <a href="{{ site.agence_lien }}" rel="noopener">Voir sa fiche</a>
+          <a href="{{ site.agence_lien }}" rel="noopener">{{ c.agence_bouton or "Voir sa fiche" }}</a>
         </div>
       </div>
     </section>
