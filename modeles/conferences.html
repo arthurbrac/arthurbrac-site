@@ -40,7 +40,9 @@
 
 {% block contenu %}
     <section class="bandeau">
-      {{ photo(c.bandeau_photo, "Arthur Brac de la Perrière, portrait en noir et blanc", "100vw", (800, 1600), "bandeau__image", prioritaire=True) }}
+      <div class="bandeau__cadre">
+        {{ photo(c.bandeau_photo, "Arthur Brac de la Perrière, portrait en noir et blanc", "100vw", (800, 1600), "bandeau__image", prioritaire=True) }}
+      </div>
       <div class="bandeau__texte">
         <h1>{{ c.bandeau_titre|typo }}</h1>
         <p>{{ c.bandeau_texte|typo }}</p>
