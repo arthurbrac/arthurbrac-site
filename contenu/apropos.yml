@@ -87,7 +87,7 @@ bio_courte: Arthur Brac de la Perrière est entrepreneur, écrivain et
   sur ce que la philosophie apporte à l'action.
 credits_titre: Crédits
 credits:
-  - livre: Photographies du site
+  - livre: Portraits
     auteur: Pascal Bellanca
     oeuvre: false
   - livre: Les Rimes du monde
@@ -96,5 +96,7 @@ credits:
     auteur: Tableau du peintre ukrainien S. Posudevsky
   - livre: La pieuvre de Lhassa
     auteur: Tableau de Gaël Dod
+  - livre: L'Asie centrale poétique
+    auteur: Collaboration de Sabine Bord et Marc Lasserre
   - livre: L'entrepreneur philosophe
     auteur: Florence Bouchet
