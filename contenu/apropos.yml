@@ -85,8 +85,11 @@ bio_courte: Arthur Brac de la Perrière est entrepreneur, écrivain et
   écologique. Auteur de sept livres, dont *L'entrepreneur philosophe* (2021), il
   intervient auprès des dirigeants, des réseaux d'entrepreneurs et des écoles
   sur ce que la philosophie apporte à l'action.
-credits_titre: Crédits des couvertures
+credits_titre: Crédits
 credits:
+  - livre: Photographies du site
+    auteur: Pascal Bellanca
+    oeuvre: false
   - livre: Les Rimes du monde
     auteur: Tableau de Gaël Dod, peintre
   - livre: La Terre est un poème

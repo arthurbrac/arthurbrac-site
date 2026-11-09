@@ -258,12 +258,13 @@ content:
       - { name: bio_courte, label: "Bio courte", component: aide_mise_en_forme }
       - { name: credits_titre, label: "Titre des crédits", type: string }
       - name: credits
-        label: Crédits des couvertures
+        label: Crédits
         type: object
         list: true
         fields:
-          - { name: livre, label: "Livre", type: string }
+          - { name: livre, label: "Livre ou élément crédité", type: string }
           - { name: auteur, label: "Crédit", type: string }
+          - { name: oeuvre, label: "Titre d'œuvre (en italique) ?", type: boolean, default: true }
 
   - name: presse
     label: Presse

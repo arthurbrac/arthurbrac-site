@@ -69,7 +69,7 @@
       <div class="conteneur section__intro">
         <h2 id="titre-credits">{{ A.credits_titre }}</h2>
         <ul class="credits">
-          {% for c in A.credits %}<li><em>{{ c.livre }}</em>&nbsp;: {{ c.auteur }}</li>{% endfor %}
+          {% for c in A.credits %}<li>{% if c.oeuvre is sameas false %}{{ c.livre }}{% else %}<em>{{ c.livre }}</em>{% endif %}&nbsp;: {{ c.auteur }}</li>{% endfor %}
         </ul>
       </div>
     </section>
