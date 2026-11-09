@@ -150,6 +150,9 @@ content:
               - { name: annee, label: "Année(s)", type: string }
       - { name: agence_texte, label: "Texte sur l'agence", component: aide_mise_en_forme }
       - { name: agence_bouton, label: "Texte du lien vers la fiche de l'agence", type: string }
+      - { name: mise_en_scene_texte, label: "Encart mise en scène : texte (laisser vide pour masquer)", component: aide_mise_en_forme }
+      - { name: mise_en_scene_lien, label: "Encart mise en scène : lien", type: string }
+      - { name: mise_en_scene_bouton, label: "Encart mise en scène : texte du lien", type: string }
       - { name: appel_titre, label: "Bandeau final : titre", type: string }
       - { name: appel_texte, label: "Bandeau final : texte", type: text }
       - { name: appel_bouton, label: "Texte du bouton", type: string }

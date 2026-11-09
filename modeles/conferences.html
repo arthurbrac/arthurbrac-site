@@ -166,9 +166,17 @@
           </div>
           {% endfor %}
         </div>
-        <div class="encart-agence">
-          {{ c.agence_texte|md }}
-          <a href="{{ site.agence_lien }}" rel="noopener">{{ c.agence_bouton or "Voir sa fiche" }}</a>
+        <div class="encarts">
+          <div class="encart-agence">
+            {{ c.agence_texte|md }}
+            <a href="{{ site.agence_lien }}" rel="noopener">{{ c.agence_bouton or "Voir sa fiche" }}</a>
+          </div>
+          {% if c.mise_en_scene_texte %}
+          <div class="encart-agence">
+            {{ c.mise_en_scene_texte|md }}
+            {% if c.mise_en_scene_lien %}<a href="{{ c.mise_en_scene_lien }}" rel="noopener">{{ c.mise_en_scene_bouton or "Voir son site" }}</a>{% endif %}
+          </div>
+          {% endif %}
         </div>
       </div>
     </section>
