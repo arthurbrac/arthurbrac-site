@@ -7,7 +7,7 @@
   <meta name="referrer" content="strict-origin-when-cross-origin">
   <title>{{ titre_google }}</title>
   <meta name="description" content="{{ description_google }}">
-  <link rel="canonical" href="{{ url_site }}{{ adresse }}">
+  {% if adresse == "/404.html" %}<meta name="robots" content="noindex">{% else %}<link rel="canonical" href="{{ url_site }}{{ adresse }}">{% endif %}
 
   <meta property="og:type" content="website">
   <meta property="og:locale" content="fr_FR">
